@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: build and publish
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Test
+        run: cargo test --workspace
+      - name: Build
+        run: cargo build --release -p disturbless
+      - name: Collect files
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory dist | Out-Null
+          Copy-Item target\release\disturbless.exe dist\Disturbless.exe
+          $hash = (Get-FileHash dist\Disturbless.exe -Algorithm SHA256).Hash.ToLower()
+          "$hash  Disturbless.exe" | Set-Content dist\Disturbless.exe.sha256 -Encoding ascii
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/Disturbless.exe
+            dist/Disturbless.exe.sha256
+          generate_release_notes: true

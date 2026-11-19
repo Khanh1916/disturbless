@@ -1,0 +1,54 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead. Screenshots help.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start a 25 minute session
+        2. Open ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Disturbless version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 23H2
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen
+      options:
+        - App blocking
+        - Browser tab blocking
+        - Website blocking (hosts file)
+        - Pause gate
+        - Lock screen or mini clock
+        - Stats
+        - Settings or language
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Which browser, whether you clicked Yes on the Windows permission prompt, and so on.
