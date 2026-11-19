@@ -12,7 +12,7 @@ jobs:
     name: build and publish
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - name: Test
@@ -27,7 +27,7 @@ jobs:
           $hash = (Get-FileHash dist\Disturbless.exe -Algorithm SHA256).Hash.ToLower()
           "$hash  Disturbless.exe" | Set-Content dist\Disturbless.exe.sha256 -Encoding ascii
       - name: Publish release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             dist/Disturbless.exe
