@@ -20,7 +20,7 @@ serde_json = { version = "1", features = ["preserve_order"] }
 png = "0.17"
 fastrand = "2"
 base64 = "0.22"
-winreg = "0.55"
+winreg = "0.56"
 
 [dependencies.windows]
 version = "0.61"
