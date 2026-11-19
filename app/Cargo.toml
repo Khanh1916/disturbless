@@ -23,7 +23,7 @@ base64 = "0.22"
 winreg = "0.55"
 
 [dependencies.windows]
-version = "0.61"
+version = "0.62"
 features = [
   "Win32_Foundation",
   "Win32_Graphics_Dwm",
