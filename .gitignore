@@ -1,0 +1,12 @@
+target/
+rust/*/target/
+rust/*/pkg/
+rust/*/.rust-anything/coverage/
+node_modules/
+app/gen/
+release/
+dist/
+rust/*/.rust-anything/
+*.log
+.vs/
+.idea/
