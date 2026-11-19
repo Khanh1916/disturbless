@@ -41,3 +41,4 @@ Other recipes:
 - Foreground tracking: our own windows being in front must not reset the pending tab; an untitled browser window is "no information", not "not banned".
 - Date handling in `stats` uses JS-style months (0-based) and overflow; use `tz::make` / `tz::parts`, not `chrono` directly.
 - Edge's first-run pages can steal the active tab; always pass `--no-first-run` and a private profile.
+- After killing the app, wait a few seconds before starting it again. Leftover msedgewebview2 helpers keep the old browser arguments, so the new instance may start without the debug port and cdp.js fails with ECONNREFUSED.
