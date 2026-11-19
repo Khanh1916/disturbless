@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = ["core", "app"]
+exclude = ["rust"]
+
+[profile.release]
+lto = true
+opt-level = "s"
+codegen-units = 1
+strip = true
+panic = "abort"
+

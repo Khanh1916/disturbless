@@ -1,0 +1,21 @@
+[package]
+name = "disturbless-core"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT"
+repository = "https://github.com/Khanh1916/disturbless"
+authors = ["Khanh1916"]
+readme = "../README.md"
+description = "Pure logic of Disturbless: session engine, stats, hosts text, app rules, tab matching"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip", "unbounded_depth"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+unicode-normalization = "0.1"
+uuid = { version = "1", features = ["v4"] }
+fastrand = "2"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
