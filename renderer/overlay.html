@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:">
+<title>Tập trung</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="cat.css">
+<link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+  <main id="root">
+    <div class="bubble" id="bubble"></div>
+    <div class="cat-slot" id="cat"></div>
+    <div class="info">
+      <div class="time" id="time">--:--</div>
+      <div class="phase" id="phase"></div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="meta" id="meta"></div>
+    </div>
+    <button class="btn open" id="open" hidden>Mở</button>
+    <div class="exit-slot" id="exit" hidden></div>
+    <div class="exit-slot emg-slot" id="emg" hidden></div>
+  </main>
+  <script src="i18n.js"></script>
+  <script src="icons.js"></script>
+  <script src="cat.js"></script>
+  <script src="tts.js"></script>
+  <script src="exitflow.js"></script>
+  <script src="emergency.js"></script>
+  <script src="overlay.js"></script>
+</body>
+</html>

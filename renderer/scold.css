@@ -1,0 +1,59 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; font-family: "Segoe UI", system-ui, sans-serif; user-select: none; }
+#dim { position: fixed; inset: 0; background: radial-gradient(ellipse at center, rgba(8,10,24,.55), rgba(8,10,24,.78)); opacity: 0; transition: opacity .25s; }
+#flash { position: fixed; inset: 0; opacity: 0; pointer-events: none; }
+body.on #dim { opacity: 1; }
+body.out #dim { opacity: 0; transition: opacity .5s; }
+
+#stage { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+#catbox { position: relative; width: 300px; height: 315px; transform: scale(.2); opacity: 0; }
+body.on #catbox { animation: pop .38s cubic-bezier(.2,1.5,.4,1) forwards; }
+body.out #stage { opacity: 0; transition: opacity .5s; }
+.lv2 #catbox { width: 340px; height: 357px; }
+.lv3 #catbox { width: 400px; height: 420px; }
+
+#bubble {
+  position: relative; max-width: 620px; padding: 16px 26px; border-radius: 22px; background: #fff; color: #231a10;
+  font-size: 25px; font-weight: 700; line-height: 1.35; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.45);
+  opacity: 0; transform: translateY(10px);
+}
+#bubble::after { content: ""; position: absolute; left: 50%; bottom: -14px; margin-left: -14px; border: 14px solid transparent; border-top-color: #fff; border-bottom: 0; }
+body.on #bubble { animation: bubble-in .3s .2s ease-out forwards; }
+.lv2 #bubble { font-size: 29px; }
+.lv3 #bubble { font-size: 34px; color: #7d0a1f; }
+
+#hand { position: absolute; top: 40px; right: -50px; width: 190px; opacity: 0; transform-origin: 100% 60%; z-index: 3; pointer-events: none; filter: drop-shadow(0 8px 14px rgba(0,0,0,.4)); }
+.lv3 #hand { width: 250px; right: -80px; top: 20px; }
+#hand.go { animation: slap .42s cubic-bezier(.3,0,.2,1) forwards; }
+#hand.go2 { animation: slap .36s cubic-bezier(.3,0,.2,1) forwards; }
+
+#boom {
+  position: absolute; left: -40px; top: 10px; z-index: 4; font-size: 74px; font-weight: 900; color: #ffe14d; letter-spacing: 1px;
+  -webkit-text-stroke: 7px #b3142b; paint-order: stroke fill; text-shadow: 0 6px 0 rgba(0,0,0,.3);
+  transform: rotate(-10deg) scale(0); opacity: 0; pointer-events: none; white-space: nowrap;
+}
+.lv3 #boom { font-size: 110px; left: -80px; }
+#boom.hit { animation: boom .6s cubic-bezier(.2,1.6,.4,1) forwards; }
+
+#stage.shake { animation: shake-s .34s linear; }
+#stage.shake3 { animation: shake-l .6s linear; }
+#flash.f2 { background: radial-gradient(circle, rgba(255,60,80,.0) 30%, rgba(255,40,70,.4) 100%); animation: flash .5s ease-out; }
+#flash.f3 { background: radial-gradient(circle, rgba(255,255,255,.55) 0%, rgba(255,30,60,.55) 70%); animation: flash .8s ease-out; }
+#catbox.headshake { animation: headshake .5s ease-in-out 2; opacity: 1; transform: scale(1); }
+
+@keyframes pop { from { transform: scale(.2); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+@keyframes bubble-in { to { opacity: 1; transform: none } }
+@keyframes slap {
+  0% { opacity: 0; transform: translate(320px, -40px) rotate(35deg) }
+  25% { opacity: 1 }
+  62% { opacity: 1; transform: translate(-150px, 40px) rotate(-14deg) }
+  100% { opacity: 0; transform: translate(-250px, 70px) rotate(-26deg) }
+}
+@keyframes boom { 0% { transform: rotate(-10deg) scale(0); opacity: 0 } 50% { transform: rotate(-14deg) scale(1.25); opacity: 1 } 100% { transform: rotate(-10deg) scale(1); opacity: 1 } }
+@keyframes shake-s { 0%,100% { transform: translate(0) } 20% { transform: translate(-12px,4px) } 40% { transform: translate(10px,-5px) } 60% { transform: translate(-7px,3px) } 80% { transform: translate(5px,-2px) } }
+@keyframes shake-l { 0%,100% { transform: translate(0) rotate(0) } 10% { transform: translate(-34px,12px) rotate(-1.4deg) } 25% { transform: translate(30px,-16px) rotate(1.2deg) } 40% { transform: translate(-26px,10px) rotate(-.9deg) } 55% { transform: translate(20px,-8px) rotate(.7deg) } 75% { transform: translate(-10px,5px) } }
+@keyframes flash { from { opacity: 1 } to { opacity: 0 } }
+@keyframes headshake { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-6deg) } 75% { transform: rotate(6deg) } }
+
+@media (prefers-reduced-motion: reduce) {
+  #stage.shake, #stage.shake3 { animation: none; }
+}

@@ -1,0 +1,54 @@
+.cat { width: 100%; height: 100%; overflow: visible; display: block; }
+.cat .e, .cat .m, .cat .b, .cat .sweat, .cat .mark, .cat .stars, .cat .sparkles { display: none; }
+
+/* biểu cảm */
+.cat[data-mood="happy"] .e-open, .cat[data-mood="happy"] .m-happy { display: inline; }
+.cat[data-mood="cheer"] .e-cheer, .cat[data-mood="cheer"] .m-happy, .cat[data-mood="cheer"] .sparkles { display: inline; }
+.cat[data-mood="worried"] .e-worried, .cat[data-mood="worried"] .m-worried,
+.cat[data-mood="worried"] .b-worried, .cat[data-mood="worried"] .sweat { display: inline; }
+.cat[data-mood="angry"] .e-open, .cat[data-mood="angry"] .m-angry, .cat[data-mood="angry"] .b-angry { display: inline; }
+.cat[data-mood="slapped"] .e-slapped, .cat[data-mood="slapped"] .m-slapped,
+.cat[data-mood="slapped"] .mark, .cat[data-mood="slapped"] .stars { display: inline; }
+.cat[data-mood="angry"] .blush, .cat[data-mood="slapped"] .blush { fill: #ff4d66; opacity: .75; }
+
+/* chuyển động */
+.cat .cat-wrap { animation: cat-bob 2.8s ease-in-out infinite; transform-origin: 100px 200px; }
+.cat .pupil { animation: cat-blink 4.2s infinite; transform-box: fill-box; transform-origin: center; }
+.cat[data-mood="cheer"] .cat-wrap { animation: cat-hop .55s ease-in-out infinite; }
+.cat[data-mood="worried"] .cat-wrap { animation: cat-tremble .18s linear infinite; }
+.cat[data-mood="angry"] .cat-wrap { animation: cat-fume .14s linear infinite; }
+.cat[data-mood="slapped"] .cat-wrap { animation: cat-hit .5s cubic-bezier(.2,1.4,.4,1) both; }
+.cat[data-mood="slapped"] .cat-head { transform-origin: 100px 170px; transform: rotate(16deg); }
+.cat .stars { transform-origin: 100px 40px; animation: cat-spin 1.4s linear infinite; }
+.cat .sparkles { animation: cat-twinkle .7s ease-in-out infinite alternate; transform-origin: 100px 100px; }
+
+@keyframes cat-bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-4px) } }
+@keyframes cat-blink { 0%,94%,100% { transform: scaleY(1) } 97% { transform: scaleY(.08) } }
+@keyframes cat-hop { 0%,100% { transform: translateY(0) rotate(-2deg) } 50% { transform: translateY(-16px) rotate(2deg) } }
+@keyframes cat-tremble { 0%,100% { transform: translateX(-1.5px) } 50% { transform: translateX(1.5px) } }
+@keyframes cat-fume { 0%,100% { transform: translate(-2px,0) } 50% { transform: translate(2px,-1px) } }
+@keyframes cat-hit { 0% { transform: translateX(-26px) rotate(-8deg) } 60% { transform: translateX(6px) rotate(3deg) } 100% { transform: translateX(0) rotate(0) } }
+@keyframes cat-spin { to { transform: rotate(360deg) } }
+@keyframes cat-twinkle { from { opacity: .35; transform: scale(.9) } to { opacity: 1; transform: scale(1.08) } }
+
+/* ───── chế độ ảnh thật ───── */
+.catimg { display: grid; place-items: center; container-type: size; }
+.catimg .ci-wrap { position: relative; width: 100%; height: 100%; animation: ci-bob 2.8s ease-in-out infinite; transform-origin: 50% 90%; }
+.catimg .ci { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 22px; box-shadow: 0 0 0 4px var(--mood, transparent), 0 12px 28px -10px rgba(0,0,0,.5); transition: box-shadow .3s; }
+.catimg[data-mood="happy"] { --mood: transparent; }
+.catimg[data-mood="cheer"] { --mood: var(--ok); }
+.catimg[data-mood="worried"] { --mood: var(--warn); }
+.catimg[data-mood="angry"], .catimg[data-mood="slapped"] { --mood: var(--danger); }
+.catimg .fx { display: none; position: absolute; pointer-events: none; }
+.catimg .fx-mark { width: 26%; right: 10%; top: 38%; }
+.catimg[data-mood="slapped"] .fx-mark { display: block; }
+.catimg[data-mood="cheer"] .ci-wrap { animation: cat-hop .55s ease-in-out infinite; }
+.catimg[data-mood="worried"] .ci-wrap { animation: cat-tremble .18s linear infinite; }
+.catimg[data-mood="angry"] .ci-wrap { animation: cat-fume .14s linear infinite; }
+.catimg[data-mood="angry"] .ci { filter: sepia(.35) saturate(2.4) hue-rotate(-25deg); }
+.catimg[data-mood="slapped"] .ci-wrap { animation: cat-hit .5s cubic-bezier(.2,1.4,.4,1) both; }
+.catimg[data-mood="slapped"] .ci { transform: rotate(14deg); filter: saturate(1.3) brightness(1.05); }
+@keyframes ci-bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-4px) } }
+@media (prefers-reduced-motion: reduce) {
+  .cat *, .catimg * { animation: none !important; }
+}
