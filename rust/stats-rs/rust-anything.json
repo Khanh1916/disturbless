@@ -1,0 +1,54 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "F:\\repo_github\\disturbless",
+  "unit": "core-esm/stats.js",
+  "language": "ts",
+  "kind": "wasm",
+  "crate_name": "stats-rs",
+  "exports": [
+    {
+      "name": "dayKey",
+      "file": "core-esm/stats.js",
+      "line": 4,
+      "params": [
+        {
+          "name": "ts",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "summarize",
+      "file": "core-esm/stats.js",
+      "line": 18,
+      "params": [
+        {
+          "name": "history",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "now",
+          "ts_type": "unknown",
+          "optional": true,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}

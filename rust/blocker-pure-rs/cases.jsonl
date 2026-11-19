@@ -1,0 +1,349 @@
+{"fn":"normName","args":["x"],"ok":"x"}
+{"fn":"normName","args":[null],"ok":""}
+{"fn":"normName","args":[["a",1]],"ok":"a,1"}
+{"fn":"normName","args":[true],"ok":"true"}
+{"fn":"normName","args":[0],"ok":""}
+{"fn":"normName","args":[[]],"ok":""}
+{"fn":"normName","args":[{"a":"b"}],"ok":"[object object]"}
+{"fn":"normName","args":[{"a":{"b":"c"}}],"ok":"[object object]"}
+{"fn":"normName","args":[{}],"ok":"[object object]"}
+{"fn":"normName","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"ok":"[object object]"}
+{"fn":"normName","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"ok":"[object object]"}
+{"fn":"normName","args":[[3,1,2]],"ok":"3,1,2"}
+{"fn":"isSystemPath","args":["x",[]],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},null],"ok":false}
+{"fn":"isSystemPath","args":[true,{}],"ok":false}
+{"fn":"isSystemPath","args":[[],"x"],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[0,0],"ok":false}
+{"fn":"isSystemPath","args":[{},[]],"ok":false}
+{"fn":"isSystemPath","args":[[],[]],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[{},{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[[],{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[[],{}],"ok":false}
+{"fn":"isSystemPath","args":[true,null],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],[]],"ok":false}
+{"fn":"isSystemPath","args":[true,{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[0,{}],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},[]],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},[]],"ok":false}
+{"fn":"isSystemPath","args":[true,[]],"ok":false}
+{"fn":"isSystemPath","args":[null,{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],true],"ok":false}
+{"fn":"isSystemPath","args":["x",{}],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[true,0],"ok":false}
+{"fn":"isSystemPath","args":["x",null],"ok":false}
+{"fn":"isSystemPath","args":[{},0],"ok":false}
+{"fn":"isSystemPath","args":[null,{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[0,"x"],"ok":false}
+{"fn":"isSystemPath","args":[null,null],"ok":false}
+{"fn":"isSystemPath","args":["x","x"],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],{}],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[true,true],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[[],null],"ok":false}
+{"fn":"isSystemPath","args":[0,{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[[],0],"ok":false}
+{"fn":"isSystemPath","args":[0,null],"ok":false}
+{"fn":"isSystemPath","args":[[],{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[null,0],"ok":false}
+{"fn":"isSystemPath","args":[null,{}],"ok":false}
+{"fn":"isSystemPath","args":[0,["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[0,{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[[],["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[true,{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":["X","x"],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],null],"ok":false}
+{"fn":"isSystemPath","args":[true,["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},0],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],"x"],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},"x"],"ok":false}
+{"fn":"isSystemPath","args":[null,[]],"ok":false}
+{"fn":"isSystemPath","args":[null,"x"],"ok":false}
+{"fn":"isSystemPath","args":[0,true],"ok":false}
+{"fn":"isSystemPath","args":[{},{}],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},true],"ok":false}
+{"fn":"isSystemPath","args":[[],true],"ok":false}
+{"fn":"isSystemPath","args":[{},null],"ok":false}
+{"fn":"isSystemPath","args":["x",0],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[{},true],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},true],"ok":false}
+{"fn":"isSystemPath","args":[{"a":{"b":"c"}},{}],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},"x"],"ok":false}
+{"fn":"isSystemPath","args":[["a",1],0],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},{}],"ok":false}
+{"fn":"isSystemPath","args":[{},["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[null,true],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},0],"ok":false}
+{"fn":"isSystemPath","args":[0,[]],"ok":false}
+{"fn":"isSystemPath","args":["x",{"a":"b"}],"ok":false}
+{"fn":"isSystemPath","args":["x",true],"ok":false}
+{"fn":"isSystemPath","args":["x",{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[{},{"a":{"b":"c"}}],"ok":false}
+{"fn":"isSystemPath","args":[{"a":"b"},null],"ok":false}
+{"fn":"isSystemPath","args":[{},"x"],"ok":false}
+{"fn":"isSystemPath","args":["x",["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[null,["a",1]],"ok":false}
+{"fn":"isSystemPath","args":[true,"x"],"ok":false}
+{"fn":"isSystemPath","args":["x","X"],"ok":false}
+{"fn":"isSystemPath","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6},[]],"ok":false}
+{"fn":"isSystemPath","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7},[]],"ok":false}
+{"fn":"isSystemPath","args":[[3,1,2],[]],"ok":false}
+{"fn":"isSystemPath","args":["x",{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"ok":false}
+{"fn":"isSystemPath","args":["x",{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"ok":false}
+{"fn":"isSystemPath","args":["x",[3,1,2]],"ok":false}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":null,"title":true,"path":0},{"pid":{"a":{"b":"c"}},"name":null,"title":"x","path":{"a":{"b":"c"}}}],{"appMode":"allow","allowed":["trailing.","a","ünïcödé"],"blocked":["  padded  :"],"selfPids":[],"systemRoot":":😀"}],"ok":[{"pid":{"a":{"b":"c"}},"name":null,"title":"x","path":{"a":{"b":"c"}}}]}
+{"fn":"evaluate","args":[[{"pid":null,"name":{"a":"b"},"title":0,"path":{"a":"b"}},{"pid":["a",1],"name":[],"title":{"a":"b"},"path":true}],{"appMode":"block","allowed":[],"blocked":[],"selfPids":[-2.5,2,{"$num":"NaN"}]}],"ok":[]}
+{"fn":"evaluate","args":["x",{"appMode":"off","allowed":[],"blocked":["a","😀","tab\tseparated"],"selfPids":[{"$num":"Infinity"},{"$num":"-0"}],"systemRoot":"a😀b😀c"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":true,"title":true,"path":{"a":{"b":"c"}}}],{"appMode":"block","allowed":["ns:key.pathHello World","日本語のテキスト"],"blocked":[],"selfPids":[],"systemRoot":"tab\tseparated😀"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":"x","name":["a",1],"title":"x","path":0}],{"appMode":"allow","allowed":["日本語のテキスト"],"blocked":["a..bstraße"],"selfPids":[10],"systemRoot":"é"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":0,"name":0,"title":"x","path":[]},{"pid":true,"name":null,"title":null,"path":0},{"pid":[],"name":["a",1],"title":"x","path":"x"}],{"appMode":"allow","allowed":["﻿bom","ΣΊΣΥΦΟΣ","a"],"blocked":["trailing.","a:b:ca.b.c"],"selfPids":[0]}],"ok":[{"pid":[],"name":["a",1],"title":"x","path":"x"}]}
+{"fn":"evaluate","args":[[{"pid":true,"name":{},"title":["a",1],"path":{"a":"b"}}],{"appMode":"allow","allowed":["HELLO"],"blocked":["tab\tseparated","tab\tseparated","trailing."],"selfPids":[42]}],"ok":[{"pid":true,"name":{},"title":["a",1],"path":{"a":"b"}}]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":null,"title":"x","path":"x"},{"pid":["a",1],"name":{"a":"b"},"title":null,"path":{"a":"b"}},{"pid":"x","name":{},"title":{"a":"b"},"path":{"a":{"b":"c"}}}],{"appMode":"allow","allowed":["straße","tab\tseparatedtrailing."],"blocked":["ünïcödé"],"selfPids":[{"$num":"NaN"}],"systemRoot":"straße"}],"ok":[{"pid":{"a":"b"},"name":null,"title":"x","path":"x"},{"pid":["a",1],"name":{"a":"b"},"title":null,"path":{"a":"b"}},{"pid":"x","name":{},"title":{"a":"b"},"path":{"a":{"b":"c"}}}]}
+{"fn":"evaluate","args":[[{"pid":true,"name":{"a":{"b":"c"}},"title":"x","path":0}],{"appMode":"block","allowed":["line1\nline2","tab\tseparated","日本語のテキスト"],"blocked":["ΣΊΣΥΦΟΣ"],"selfPids":[],"systemRoot":"emoji 👍🏽 mix"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"block","allowed":["日本語のテキスト"],"blocked":["trailing.","ab","HELLO"],"selfPids":[0.5],"systemRoot":"ΣΊΣΥΦΟΣ"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":{"a":"b"},"title":["a",1],"path":null},{"pid":0,"name":null,"title":0,"path":null},{"pid":{},"name":0,"title":[],"path":true}],{"appMode":"allow","allowed":["emoji 👍🏽 mix",".leading","Hello World"],"blocked":["日本語のテキストünïcödé","a..b日本語のテキスト","src/a/b.ts"],"selfPids":[1000,-1]}],"ok":[{"pid":{},"name":0,"title":[],"path":true}]}
+{"fn":"evaluate","args":[[{"pid":"x","name":null,"title":{"a":"b"},"path":true},{"pid":"x","name":0,"title":{"a":"b"},"path":["a",1]}],{"appMode":"off","allowed":["hello","Hello World","ns:key.path"],"blocked":["a:b:c","ünïcödé","😀"],"selfPids":[100,{"$num":"-Infinity"}],"systemRoot":"İstanbul日本語のテキスト"}],"ok":[]}
+{"fn":"evaluate","args":[{},{"appMode":"off","allowed":["line1\nline2"],"blocked":["key_name-1","hello"],"selfPids":[2147483648,42,{"$num":"-Infinity"}],"systemRoot":"a..b"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":{"a":"b"},"title":{"a":{"b":"c"}},"path":{}}],{"appMode":"block","allowed":["﻿bom","trailing.ns:key.path"],"blocked":[],"selfPids":[],"systemRoot":"key_name-1:"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":{"a":"b"},"title":{"a":{"b":"c"}},"path":[]}],0],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":[],"name":{},"title":"x","path":null}],{"appMode":"allow","allowed":["a😀b😀cHELLO"],"blocked":["abca.b.c"],"selfPids":[{"$num":"Infinity"},42],"systemRoot":"straße"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":["日本語のテキスト"],"blocked":[],"selfPids":[1000]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":["a",1],"title":"x","path":{"a":"b"}},{"pid":"x","name":{"a":{"b":"c"}},"title":{},"path":true},{"pid":[],"name":{"a":{"b":"c"}},"title":"x","path":{}}],{"appMode":"allow","allowed":["a:b:c","abline1\nline2"],"blocked":[":straße","a..b","ünïcödé:"],"selfPids":[]}],"ok":[{"pid":["a",1],"name":["a",1],"title":"x","path":{"a":"b"}},{"pid":"x","name":{"a":{"b":"c"}},"title":{},"path":true},{"pid":[],"name":{"a":{"b":"c"}},"title":"x","path":{}}]}
+{"fn":"evaluate","args":[[{"pid":"x","name":{"a":{"b":"c"}},"title":0,"path":{"a":{"b":"c"}}}],{"appMode":"allow","allowed":[],"blocked":["  padded  "],"selfPids":[10]}],"ok":[{"pid":"x","name":{"a":{"b":"c"}},"title":0,"path":{"a":{"b":"c"}}}]}
+{"fn":"evaluate","args":[[{"pid":null,"name":null,"title":true,"path":{"a":{"b":"c"}}},{"pid":{"a":"b"},"name":{"a":{"b":"c"}},"title":true,"path":"x"}],{"appMode":"off","allowed":["a😀b😀c","straße"],"blocked":["a..b","Hello World"],"selfPids":[2147483648,-2.5]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":null,"name":{"a":"b"},"title":["a",1],"path":0}],{"appMode":"block","allowed":["straße","  padded  tab\tseparated"],"blocked":[".leading","./x/**/*.json"],"selfPids":[{"$num":"Infinity"},1000000],"systemRoot":":"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":{"a":"b"},"title":{"a":{"b":"c"}},"path":[]},{"pid":true,"name":true,"title":{},"path":["a",1]}],{"appMode":"block","allowed":["line1\nline2","  padded  ",""],"blocked":["HELLOhello world","İstanbul","ns:key.path"],"selfPids":[3],"systemRoot":"abcΣΊΣΥΦΟΣ"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"off","allowed":["ns:key.path"],"blocked":["﻿bom"],"selfPids":[{"$num":"-0"}],"systemRoot":"ab"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":{},"title":true,"path":[]},{"pid":{},"name":0,"title":null,"path":{}}],{"appMode":"off","allowed":["Hello Worldünïcödé","straße","abline1\nline2"],"blocked":["﻿bom","Hello World"],"selfPids":[],"systemRoot":"a.b.c"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":[],"blocked":["straße","{name} has {count} items","abc😀"],"selfPids":[42]}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":[":İstanbul","ünïcödé","trailing."],"blocked":[],"selfPids":[1,{"$num":"NaN"},1],"systemRoot":"Hello World"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":["ns:key.path","hello world"],"blocked":["./x/**/*.json",":"],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":true,"name":{"a":"b"},"title":{"a":"b"},"path":["a",1]},{"pid":{"a":{"b":"c"}},"name":null,"title":"x","path":{"a":"b"}},{"pid":0,"name":{},"title":null,"path":true}],["a",1]],"ok":[{"pid":true,"name":{"a":"b"},"title":{"a":"b"},"path":["a",1]},{"pid":{"a":{"b":"c"}},"name":null,"title":"x","path":{"a":"b"}},{"pid":0,"name":{},"title":null,"path":true}]}
+{"fn":"evaluate","args":[[{"pid":null,"name":0,"title":[],"path":[]},{"pid":{"a":"b"},"name":"x","title":{"a":"b"},"path":{"a":{"b":"c"}}}],{"appMode":"block","allowed":["ns:key.patha😀b😀c","ΣΊΣΥΦΟΣ","ünïcödéHELLO"],"blocked":["a","ab","ünïcödé"],"selfPids":[0.5,{"$num":"NaN"},-1],"systemRoot":"﻿bom"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":{},"title":{"a":"b"},"path":null}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"{name} has {count} items"}],"ok":[]}
+{"fn":"evaluate","args":[[],["a",1]],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"off","allowed":[],"blocked":["日本語のテキスト","Hello World","  padded  hello"],"selfPids":[9007199254740992]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":["a",1],"title":"x","path":{"a":"b"}}],{"appMode":"allow","allowed":["é","hello world"],"blocked":[],"selfPids":[],"systemRoot":"ΣΊΣΥΦΟΣ"}],"ok":[{"pid":["a",1],"name":["a",1],"title":"x","path":{"a":"b"}}]}
+{"fn":"evaluate","args":[[{"pid":0,"name":[],"title":{},"path":0},{"pid":0,"name":0,"title":["a",1],"path":[]},{"pid":["a",1],"name":["a",1],"title":{"a":"b"},"path":null}],{"appMode":"block","allowed":[],"blocked":["hello world","é"],"selfPids":[-1,{"$num":"Infinity"},{"$num":"-Infinity"}],"systemRoot":"a"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":null,"name":"x","title":{},"path":{"a":"b"}},{"pid":0,"name":{},"title":{"a":"b"},"path":[]},{"pid":true,"name":"x","title":[],"path":{"a":"b"}}],{"appMode":"allow","allowed":["éa.b.c"],"blocked":["ünïcödé"],"selfPids":[0.5,1,3],"systemRoot":"a"}],"ok":[{"pid":null,"name":"x","title":{},"path":{"a":"b"}},{"pid":0,"name":{},"title":{"a":"b"},"path":[]},{"pid":true,"name":"x","title":[],"path":{"a":"b"}}]}
+{"fn":"evaluate","args":[[{"pid":{"a":{"b":"c"}},"name":null,"title":null,"path":{}},{"pid":[],"name":{"a":"b"},"title":{"a":{"b":"c"}},"path":["a",1]},{"pid":null,"name":{"a":"b"},"title":"x","path":["a",1]}],{"appMode":"allow","allowed":["trailing."],"blocked":["ünïcödé","İstanbul","key_name-1"],"selfPids":[0]}],"ok":[{"pid":{"a":{"b":"c"}},"name":null,"title":null,"path":{}},{"pid":[],"name":{"a":"b"},"title":{"a":{"b":"c"}},"path":["a",1]},{"pid":null,"name":{"a":"b"},"title":"x","path":["a",1]}]}
+{"fn":"evaluate","args":[[{"pid":{},"name":0,"title":"x","path":{"a":{"b":"c"}}}],["a",1]],"ok":[{"pid":{},"name":0,"title":"x","path":{"a":{"b":"c"}}}]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":true,"title":{"a":"b"},"path":[]},{"pid":null,"name":"x","title":0,"path":{}},{"pid":{"a":"b"},"name":[],"title":{"a":"b"},"path":["a",1]}],{}],"ok":[{"pid":{"a":"b"},"name":true,"title":{"a":"b"},"path":[]},{"pid":null,"name":"x","title":0,"path":{}},{"pid":{"a":"b"},"name":[],"title":{"a":"b"},"path":["a",1]}]}
+{"fn":"evaluate","args":[[],true],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":{},"title":[],"path":{"a":{"b":"c"}}}],[]],"ok":[{"pid":["a",1],"name":{},"title":[],"path":{"a":{"b":"c"}}}]}
+{"fn":"evaluate","args":[[{"pid":true,"name":{},"title":null,"path":true},{"pid":null,"name":0,"title":[],"path":{"a":"b"}}],{"appMode":"off","allowed":["a😀b😀cHello World","😀"],"blocked":[],"selfPids":[0],"systemRoot":"  padded  "}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"block","allowed":[],"blocked":["ns:key.path"],"selfPids":[0.5,3,3],"systemRoot":"ab"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"a":{"b":"c"}}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":{"a":"b"},"title":{},"path":{"a":"b"}}],{"appMode":"block","allowed":["é","HELLO",".leadingab"],"blocked":["😀ab"],"selfPids":[9007199254740992,1,10],"systemRoot":"a"}],"ok":[]}
+{"fn":"evaluate","args":["x",{"appMode":"allow","allowed":["ünïcödé","./x/**/*.json{name} has {count} items"],"blocked":[],"selfPids":[-2.5,{"$num":"Infinity"},-1],"systemRoot":"a😀b😀c"}],"error":"windows.filter is not a function"}
+{"fn":"evaluate","args":[[],{"appMode":"block","allowed":[],"blocked":["abc","key_name-1","hello world:"],"selfPids":[42,-2.5]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":0,"title":[],"path":"x"}],{"appMode":"block","allowed":["İstanbul"],"blocked":[],"selfPids":[{"$num":"NaN"},100,0.5],"systemRoot":"İstanbulHELLO"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":["a.b.cemoji 👍🏽 mix","  padded  "],"blocked":[],"selfPids":[0.5,1000],"systemRoot":"a.b.c"}],"ok":[]}
+{"fn":"evaluate","args":[[],{}],"ok":[]}
+{"fn":"evaluate","args":[null,{"appMode":"off","allowed":["ab","emoji 👍🏽 mix"],"blocked":["ΣΊΣΥΦΟΣ","a"],"selfPids":[3],"systemRoot":"ns:key.pathemoji 👍🏽 mix"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":{"b":"c"}},"name":{"a":{"b":"c"}},"title":{"a":{"b":"c"}},"path":{}},{"pid":true,"name":{"a":"b"},"title":{},"path":"x"}],{"appMode":"allow","allowed":["line1\nline2src/a/b.ts"],"blocked":[],"selfPids":[{"$num":"-0"}],"systemRoot":"😀"}],"ok":[{"pid":{"a":{"b":"c"}},"name":{"a":{"b":"c"}},"title":{"a":{"b":"c"}},"path":{}},{"pid":true,"name":{"a":"b"},"title":{},"path":"x"}]}
+{"fn":"evaluate","args":[[],{"appMode":"off","allowed":[],"blocked":["hello world","HELLOabc"],"selfPids":[0.5,-1],"systemRoot":"hello world日本語のテキスト"}],"ok":[]}
+{"fn":"evaluate","args":[true,{"appMode":"block","allowed":["","hello","./x/**/*.json"],"blocked":["a😀b😀c","😀","line1\nline2"],"selfPids":[1000,{"$num":"-0"},-2.5]}],"error":"windows.filter is not a function"}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":["ünïcödé"],"blocked":[],"selfPids":[{"$num":"NaN"}]}],"ok":[]}
+{"fn":"evaluate","args":[[],[]],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":true,"name":{},"title":{},"path":0}],{"appMode":"block","allowed":["line1\nline2","ünïcödé","./x/**/*.json"],"blocked":["ns:key.path","ns:key.path"],"selfPids":[1000000,{"$num":"NaN"},0],"systemRoot":"emoji 👍🏽 mix"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":["a:b:c","İstanbul",".leading"],"blocked":["İstanbul","HELLOé","ab"],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":true,"name":{"a":"b"},"title":["a",1],"path":{"a":{"b":"c"}}},{"pid":{},"name":true,"title":{"a":"b"},"path":{"a":"b"}},{"pid":true,"name":[],"title":0,"path":["a",1]}],{"appMode":"block","allowed":["ab",":ab","a..b"],"blocked":["abc"],"selfPids":[9007199254740992,{"$num":"-Infinity"}]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":[],"name":{},"title":["a",1],"path":null},{"pid":0,"name":0,"title":"x","path":{}}],{"appMode":"allow","allowed":[],"blocked":["HELLO","","İstanbul"],"selfPids":[42,1]}],"ok":[{"pid":0,"name":0,"title":"x","path":{}}]}
+{"fn":"evaluate","args":[[{"pid":[],"name":0,"title":0,"path":0},{"pid":"x","name":[],"title":0,"path":{"a":{"b":"c"}}},{"pid":0,"name":["a",1],"title":{"a":{"b":"c"}},"path":["a",1]}],{"appMode":"allow","allowed":["é:","😀","abc"],"blocked":["ΣΊΣΥΦΟΣ","a.b.c"],"selfPids":[],"systemRoot":"HELLO﻿bom"}],"ok":[{"pid":"x","name":[],"title":0,"path":{"a":{"b":"c"}}},{"pid":0,"name":["a",1],"title":{"a":{"b":"c"}},"path":["a",1]}]}
+{"fn":"evaluate","args":[[{"pid":[],"name":{"a":{"b":"c"}},"title":"x","path":{"a":"b"}}],0],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":null,"name":{"a":"b"},"title":"x","path":["a",1]},{"pid":[],"name":null,"title":"x","path":[]}],{"appMode":"allow","allowed":["Hello World"],"blocked":[],"selfPids":[],"systemRoot":"ΣΊΣΥΦΟΣ"}],"ok":[{"pid":null,"name":{"a":"b"},"title":"x","path":["a",1]},{"pid":[],"name":null,"title":"x","path":[]}]}
+{"fn":"evaluate","args":[[{"pid":{"a":{"b":"c"}},"name":0,"title":"x","path":["a",1]},{"pid":{"a":"b"},"name":"x","title":["a",1],"path":{}}],{"appMode":"off","allowed":["日本語のテキスト","﻿bom",".leading"],"blocked":["é","a:b:c","trailing."],"selfPids":[],"systemRoot":"hello"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":true,"name":{},"title":"x","path":[]},{"pid":"x","name":{"a":{"b":"c"}},"title":["a",1],"path":{"a":{"b":"c"}}}],{"appMode":"block","allowed":["HELLOkey_name-1"],"blocked":["line1\nline2"],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":["a",1],"title":0,"path":null}],{"appMode":"block","allowed":["hello world","a"],"blocked":["ns:key.pathsrc/a/b.ts","tab\tseparated","日本語のテキスト"],"selfPids":[9007199254740992],"systemRoot":"a"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":{"b":"c"}},"name":"x","title":{"a":"b"},"path":{"a":"b"}},{"pid":true,"name":{"a":{"b":"c"}},"title":null,"path":{"a":"b"}},{"pid":{"a":{"b":"c"}},"name":["a",1],"title":"x","path":{"a":{"b":"c"}}}],{"appMode":"block","allowed":["ΣΊΣΥΦΟΣ{name} has {count} items","tab\tseparated","é"],"blocked":["ΣΊΣΥΦΟΣ","{name} has {count} items","日本語のテキスト"],"selfPids":[1000000,{"$num":"NaN"}],"systemRoot":"abc"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":{"b":"c"}},"name":{"a":"b"},"title":null,"path":{}},{"pid":"x","name":{"a":"b"},"title":null,"path":{}},{"pid":{},"name":{},"title":null,"path":true}],{"appMode":"off","allowed":["﻿bom","ΣΊΣΥΦΟΣ"],"blocked":["éé",".leading"],"selfPids":[1000000,9007199254740992,1000],"systemRoot":"hello"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{},"name":["a",1],"title":[],"path":"x"},{"pid":null,"name":{"a":"b"},"title":"x","path":[]}],{"appMode":"off","allowed":["Hello WorldHELLO","hello"],"blocked":[],"selfPids":[],"systemRoot":"日本語のテキスト"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":"x","name":"x","title":{},"path":{}},{"pid":[],"name":{"a":"b"},"title":0,"path":true}],{"appMode":"block","allowed":["abc","﻿bom","Hello Worlda😀b😀c"],"blocked":["ünïcödéhello world"],"selfPids":[{"$num":"NaN"},10],"systemRoot":"straßetrailing."}],"ok":[]}
+{"fn":"evaluate","args":["x",{"appMode":"off","allowed":[],"blocked":["hellotab\tseparated",".leading"],"selfPids":[1000000]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":"x","name":0,"title":null,"path":null},{"pid":"x","name":{"a":"b"},"title":"x","path":null},{"pid":true,"name":["a",1],"title":[],"path":"x"}],{"appMode":"block","allowed":["Hello World","ΣΊΣΥΦΟΣ","line1\nline2"],"blocked":["hellokey_name-1","ab",""],"selfPids":[]}],"ok":[{"pid":"x","name":0,"title":null,"path":null}]}
+{"fn":"evaluate","args":[[],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[{"$num":"NaN"}],"systemRoot":"hello"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{},"name":{},"title":null,"path":true}],{"appMode":"off","allowed":["ab","ünïcödé"],"blocked":["trailing."],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[{},{"appMode":"allow","allowed":[".leading","abc"],"blocked":[],"selfPids":[]}],"error":"windows.filter is not a function"}
+{"fn":"evaluate","args":[[{"pid":"x","name":{},"title":{},"path":{}}],{}],"ok":[{"pid":"x","name":{},"title":{},"path":{}}]}
+{"fn":"evaluate","args":[[{"pid":{"a":{"b":"c"}},"name":[],"title":{"a":"b"},"path":{"a":"b"}}],{"appMode":"block","allowed":[],"blocked":["日本語のテキスト",""],"selfPids":[1,-1,9007199254740992]}],"ok":[{"pid":{"a":{"b":"c"}},"name":[],"title":{"a":"b"},"path":{"a":"b"}}]}
+{"fn":"evaluate","args":[[],{"appMode":"off","allowed":[":","a:b:c"],"blocked":["line1\nline2","{name} has {count} itemsa.b.c"],"selfPids":[],"systemRoot":"ab"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":0,"name":{"a":"b"},"title":[],"path":null}],{"appMode":"allow","allowed":["a.b.c","./x/**/*.json"],"blocked":["key_name-1"],"selfPids":[10],"systemRoot":"hello"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":[],"name":null,"title":{"a":"b"},"path":[]}],{"appMode":"off","allowed":[],"blocked":[":"],"selfPids":[9007199254740992,9007199254740992,3],"systemRoot":"key_name-1"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":0,"title":null,"path":[]},{"pid":true,"name":{},"title":null,"path":"x"}],{"appMode":"allow","allowed":["Hello Worldns:key.path"],"blocked":["😀","a"],"selfPids":[],"systemRoot":""}],"ok":[{"pid":{"a":"b"},"name":0,"title":null,"path":[]},{"pid":true,"name":{},"title":null,"path":"x"}]}
+{"fn":"evaluate","args":[0,{"appMode":"off","allowed":["Hello Worldhello","a..b","src/a/b.ts"],"blocked":[],"selfPids":[100,{"$num":"-Infinity"}],"systemRoot":"a:b:c"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":"x","name":0,"title":["a",1],"path":{"a":"b"}},{"pid":"x","name":{"a":"b"},"title":["a",1],"path":"x"},{"pid":"x","name":[],"title":{},"path":true}],{"appMode":"allow","allowed":[],"blocked":["straße"],"selfPids":[],"systemRoot":"trailing."}],"ok":[{"pid":"x","name":0,"title":["a",1],"path":{"a":"b"}},{"pid":"x","name":{"a":"b"},"title":["a",1],"path":"x"},{"pid":"x","name":[],"title":{},"path":true}]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":[],"title":0,"path":{"a":{"b":"c"}}},{"pid":0,"name":{},"title":{"a":{"b":"c"}},"path":{"a":"b"}}],{"appMode":"block","allowed":["./x/**/*.json","ΣΊΣΥΦΟΣ","日本語のテキスト"],"blocked":["a..b","{name} has {count} itemsHello World","./x/**/*.json"],"selfPids":[100,9007199254740992],"systemRoot":"a:b:cé"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"block","allowed":["Hello Worldİstanbul"],"blocked":["  padded  "],"selfPids":[1000000,{"$num":"-0"},0]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{"a":"b"},"name":"x","title":{},"path":[]},{"pid":{},"name":{"a":{"b":"c"}},"title":"x","path":0},{"pid":[],"name":"x","title":[],"path":0}],{}],"ok":[{"pid":{"a":"b"},"name":"x","title":{},"path":[]}]}
+{"fn":"evaluate","args":["x",{"appMode":"allow","allowed":["","tab\tseparateda:b:c","ünïcödé"],"blocked":[],"selfPids":[-2.5,10,0.5]}],"error":"windows.filter is not a function"}
+{"fn":"evaluate","args":[[{"pid":[],"name":[],"title":{"a":"b"},"path":{}}],{"appMode":"off","allowed":["😀","HELLO","src/a/b.ts"],"blocked":["İstanbul","line1\nline2","a"],"selfPids":[{"$num":"-Infinity"},1000000,0.5],"systemRoot":"a..b"}],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[2147483648],"systemRoot":"é"}],"ok":[]}
+{"fn":"evaluate","args":[[],0],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":"x","name":"x","title":["a",1],"path":"x"},{"pid":true,"name":{"a":{"b":"c"}},"title":{},"path":{}}],{"appMode":"block","allowed":["a","a..b"],"blocked":["emoji 👍🏽 mix","./x/**/*.json"],"selfPids":[0,10]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":{},"name":{"a":{"b":"c"}},"title":null,"path":0},{"pid":true,"name":"x","title":true,"path":["a",1]},{"pid":"x","name":null,"title":0,"path":["a",1]}],true],"ok":[{"pid":true,"name":"x","title":true,"path":["a",1]},{"pid":"x","name":null,"title":0,"path":["a",1]}]}
+{"fn":"evaluate","args":[{},{"appMode":"block","allowed":[],"blocked":[],"selfPids":[-1,0.5]}],"error":"windows.filter is not a function"}
+{"fn":"evaluate","args":[[{"pid":0,"name":null,"title":"x","path":"x"},{"pid":{},"name":{"a":"b"},"title":0,"path":[]},{"pid":{},"name":0,"title":"x","path":true}],0],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"block","allowed":["src/a/b.ts"],"blocked":["ünïcödé"],"selfPids":[1000,1000,10],"systemRoot":":"}],"ok":[]}
+{"fn":"evaluate","args":[true,{"appMode":"block","allowed":[],"blocked":["abctrailing.","hellohello world","﻿bom"],"selfPids":[2147483648,0.5,{"$num":"Infinity"}],"systemRoot":"😀"}],"error":"windows.filter is not a function"}
+{"fn":"evaluate","args":[{"a":{"b":"c"}},{"appMode":"allow","allowed":["é","src/a/b.ts","abc"],"blocked":[":﻿bom","ns:key.path"],"selfPids":[0],"systemRoot":"abc"}],"error":"windows.filter is not a function"}
+{"fn":"evaluate","args":[[{"pid":["a",1],"name":["a",1],"title":null,"path":["a",1]},{"pid":{"a":"b"},"name":[],"title":["a",1],"path":0}],{"appMode":"off","allowed":["a.b.c","a😀b😀c","{name} has {count} items"],"blocked":["hello:"],"selfPids":[],"systemRoot":"straße"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":null,"name":[],"title":true,"path":0},{"pid":{"a":{"b":"c"}},"name":[],"title":["a",1],"path":[]}],{"appMode":"allow","allowed":[":","a.b.c﻿bom","Hello World"],"blocked":["abHello World"],"selfPids":[{"$num":"-Infinity"},0.5,-1],"systemRoot":"Hello World  padded  "}],"ok":[{"pid":{"a":{"b":"c"}},"name":[],"title":["a",1],"path":[]}]}
+{"fn":"evaluate","args":[[{"pid":{},"name":{},"title":{},"path":0},{"pid":null,"name":0,"title":null,"path":{}}],[]],"ok":[{"pid":null,"name":0,"title":null,"path":{}}]}
+{"fn":"evaluate","args":[[{"pid":{"a":{"b":"c"}},"name":{"a":{"b":"c"}},"title":0,"path":0}],{"appMode":"allow","allowed":["a","a:b:c"],"blocked":["😀"],"selfPids":[],"systemRoot":"a"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"off","allowed":[],"blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"allow","allowed":[],"blocked":[],"selfPids":[],"systemRoot":"C:\\Windows\\"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"allow","allowed":["code"],"blocked":[],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"allow","allowed":["discord"],"selfPids":[],"systemRoot":"c:/windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"block","allowed":[],"blocked":["Discord","chrome","explorer","svchost","steam","ÜNÏCODE"],"selfPids":[1]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"block","blocked":[],"selfPids":[]}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"weird","allowed":["code"],"blocked":["code"],"selfPids":[],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"}]}
+{"fn":"evaluate","args":[[{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"}]}
+{"fn":"evaluate","args":[[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"}]}
+{"fn":"evaluate","args":[[{"pid":5,"name":"svchost","title":"s","path":""}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":6,"name":"game.exe","title":"g","path":null}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"}]}
+{"fn":"evaluate","args":[[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"}]}
+{"fn":"evaluate","args":[[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"}]}
+{"fn":"evaluate","args":[[{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"}]}
+{"fn":"evaluate","args":[[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"}]}
+{"fn":"evaluate","args":[[{"pid":13}],{"appMode":"allow","allowed":null,"blocked":null,"selfPids":null,"systemRoot":null}],"ok":[]}
+{"fn":"evaluate","args":[[{"pid":1,"name":"chrome.exe","title":"YouTube","path":"C:\\Program Files\\Google\\Chrome\\chrome.exe"},{"pid":2,"name":"Explorer.EXE","title":"x","path":"C:\\Windows\\explorer.exe"},{"pid":3,"name":"notepad.exe","title":"n","path":"C:\\Windows\\System32\\notepad.exe"},{"pid":4,"name":"Discord","title":"d","path":"C:/Users/a/AppData/Local/Discord/app/Discord.exe"},{"pid":5,"name":"svchost","title":"s","path":""},{"pid":6,"name":"game.exe","title":"g","path":null},{"pid":7,"name":"CODE.EXE","title":"c","path":"D:\\Dev\\Code.exe"},{"pid":8,"name":"disturbless.exe","title":"me","path":"D:\\x\\Disturbless.exe"},{"pid":9,"name":"  Steam.exe ","title":"s","path":"c:\\windows\\temp\\steam.exe"},{"pid":10,"name":"TrustedInstaller","title":"t","path":"C:\\Windows\\servicing\\TrustedInstaller.exe"},{"pid":11,"name":"Ünïcode.exe","title":"u","path":"E:\\u.exe"},{"pid":12,"name":null,"title":null,"path":"F:\\z.exe"},{"pid":13}],null],"ok":[]}
+{"fn":"evaluate","args":[[],{"appMode":"allow","allowed":["code","Chrome.exe"],"blocked":[],"selfPids":[8],"systemRoot":"C:\\Windows"}],"ok":[]}
+{"fn":"normName","args":["Chrome.EXE"],"ok":"chrome"}
+{"fn":"normName","args":["  x.exe  "],"ok":"x.exe"}
+{"fn":"normName","args":["a.exe.exe"],"ok":"a.exe"}
+{"fn":"normName","args":[".exe"],"ok":""}
+{"fn":"normName","args":["Ünï.EXE"],"ok":"ünï"}
+{"fn":"normName","args":[null],"ok":""}
+{"fn":"normName","args":[""],"ok":""}
+{"fn":"normName","args":[0],"ok":""}
+{"fn":"normName","args":["cmd.exe "],"ok":"cmd.exe"}
+{"fn":"normName","args":["Notepad "],"ok":"notepad"}
+{"fn":"isSystemPath","args":["C:\\Windows\\System32\\x.exe","C:\\Windows"],"ok":true}
+{"fn":"isSystemPath","args":["c:/WINDOWS/x.exe","C:\\Windows\\"],"ok":true}
+{"fn":"isSystemPath","args":["C:\\WindowsApps\\x.exe","C:\\Windows"],"ok":false}
+{"fn":"isSystemPath","args":["C:\\Windows","C:\\Windows"],"ok":false}
+{"fn":"isSystemPath","args":["",""],"ok":false}
+{"fn":"isSystemPath","args":[null,"C:\\Windows"],"ok":false}
+{"fn":"isSystemPath","args":["C:\\Windows\\x","C:/Windows/"],"ok":false}
+{"fn":"isSystemPath","args":["C:\\Windows\\x",""],"ok":false}
+{"fn":"isSystemPath","args":["C:\\Windows\\x",null],"ok":false}
+{"fn":"isSystemPath","args":["Ü:\\Windows\\x","ü:\\windows"],"ok":true}

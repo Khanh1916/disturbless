@@ -1,0 +1,108 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "F:\\repo_github\\disturbless",
+  "unit": "core-esm/hosts_pure.js",
+  "language": "ts",
+  "kind": "wasm",
+  "crate_name": "hosts-pure-rs",
+  "exports": [
+    {
+      "name": "cleanDomain",
+      "file": "core-esm/hosts_pure.js",
+      "line": 8,
+      "params": [
+        {
+          "name": "raw",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "expandDomains",
+      "file": "core-esm/hosts_pure.js",
+      "line": 15,
+      "params": [
+        {
+          "name": "list",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "stripBlock",
+      "file": "core-esm/hosts_pure.js",
+      "line": 26,
+      "params": [
+        {
+          "name": "text",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "withBlock",
+      "file": "core-esm/hosts_pure.js",
+      "line": 32,
+      "params": [
+        {
+          "name": "text",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "domains",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "hasBlock",
+      "file": "core-esm/hosts_pure.js",
+      "line": 41,
+      "params": [
+        {
+          "name": "text",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}

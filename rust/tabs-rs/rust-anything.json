@@ -1,0 +1,78 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "F:\\repo_github\\disturbless",
+  "unit": "core-esm/tabs.js",
+  "language": "ts",
+  "kind": "wasm",
+  "crate_name": "tabs-rs",
+  "exports": [
+    {
+      "name": "pageTitle",
+      "file": "core-esm/tabs.js",
+      "line": 15,
+      "params": [
+        {
+          "name": "title",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "brandOf",
+      "file": "core-esm/tabs.js",
+      "line": 20,
+      "params": [
+        {
+          "name": "domain",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "matchBanned",
+      "file": "core-esm/tabs.js",
+      "line": 33,
+      "params": [
+        {
+          "name": "title",
+          "ts_type": "string",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "brands",
+          "ts_type": "string[]",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "domains",
+          "ts_type": "string[]",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}

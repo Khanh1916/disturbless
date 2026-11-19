@@ -1,0 +1,1426 @@
+{"fn":"pageTitle","args":[0],"ok":""}
+{"fn":"pageTitle","args":[{}],"ok":"[object Object]"}
+{"fn":"pageTitle","args":[null],"ok":""}
+{"fn":"pageTitle","args":[{"a":{"b":"c"}}],"ok":"[object Object]"}
+{"fn":"pageTitle","args":[true],"ok":"true"}
+{"fn":"pageTitle","args":[{"a":"b"}],"ok":"[object Object]"}
+{"fn":"pageTitle","args":[["a",1]],"ok":"a,1"}
+{"fn":"pageTitle","args":["x"],"ok":"x"}
+{"fn":"pageTitle","args":[[]],"ok":""}
+{"fn":"pageTitle","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"ok":"[object Object]"}
+{"fn":"pageTitle","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"ok":"[object Object]"}
+{"fn":"pageTitle","args":[[3,1,2]],"ok":"3,1,2"}
+{"fn":"brandOf","args":["x"],"ok":null}
+{"fn":"brandOf","args":[{}],"ok":null}
+{"fn":"brandOf","args":[{"a":"b"}],"ok":null}
+{"fn":"brandOf","args":[{"a":{"b":"c"}}],"ok":null}
+{"fn":"brandOf","args":[[]],"ok":null}
+{"fn":"brandOf","args":[["a",1]],"ok":null}
+{"fn":"brandOf","args":[true],"ok":null}
+{"fn":"brandOf","args":[0],"ok":null}
+{"fn":"brandOf","args":[null],"ok":null}
+{"fn":"brandOf","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"ok":null}
+{"fn":"brandOf","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"ok":null}
+{"fn":"brandOf","args":[[3,1,2]],"ok":null}
+{"fn":"matchBanned","args":["ab",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":"ab"}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["😀",":"],[":","﻿bom"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",[".leading","a..b","HELLO"],["trailing.",":"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",["straße","tab\tseparated","日本語のテキスト"],["a.b.c","hello"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["ΣΊΣΥΦΟΣ",":"],["src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":[".leading",["İstanbul","ns:key.path","hello world"],[]],"ok":null}
+{"fn":"matchBanned","args":["日本語のテキスト",["a😀b😀c","﻿bom","İstanbul"],["ΣΊΣΥΦΟΣns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",["hello world","ΣΊΣΥΦΟΣİstanbul"],["abc"]],"ok":null}
+{"fn":"matchBanned","args":["hello",["straße"],["ΣΊΣΥΦΟΣ","a:b:cHello World","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["{name} has {count} items",[""],["日本語のテキスト","﻿bom",""]],"ok":null}
+{"fn":"matchBanned","args":["hello",["line1\nline2"],["aa:b:c","emoji 👍🏽 mix","İstanbul"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",[],[]],"ok":null}
+{"fn":"matchBanned","args":["a",["./x/**/*.json"],["a..b﻿bom"]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",["a","emoji 👍🏽 mixab","  padded  "],[":","straße"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",[],["﻿bom./x/**/*.json","src/a/b.ts","{name} has {count} items"]],"ok":null}
+{"fn":"matchBanned","args":["a",["","ünïcödé"],["  padded  ","{name} has {count} items","./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["emoji 👍🏽 mixns:key.path",[],["hello world"]],"ok":null}
+{"fn":"matchBanned","args":["hello world",["a..b","ΣΊΣΥΦΟΣ","emoji 👍🏽 mix"],["日本語のテキスト","a.b.cstraße"]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ab",["key_name-1Hello World","straße😀"],[]],"ok":null}
+{"fn":"matchBanned","args":["日本語のテキスト",["hello world","ünïcödésrc/a/b.ts"],["a","./x/**/*.json﻿bom"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts./x/**/*.json",["ns:key.path","ns:key.path","HELLO"],["ΣΊΣΥΦΟΣline1\nline2"]],"ok":null}
+{"fn":"matchBanned","args":["straße",[":","abchello world"],["😀","src/a/b.ts","trailing."]],"ok":null}
+{"fn":"matchBanned","args":[".leading",[":a😀b😀c"],["./x/**/*.json","a:b:c"]],"ok":null}
+{"fn":"matchBanned","args":["a..bHELLO",["😀","ünïcödé﻿bom"],[]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ",[],["ab"]],"ok":null}
+{"fn":"matchBanned","args":["é:",[],["ab","a",".leading"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",["日本語のテキスト"],["straßea:b:c","a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",["hello","trailing."],["trailing.","hello"]],"ok":null}
+{"fn":"matchBanned","args":["key_name-1",["src/a/b.ts"],["a"]],"ok":null}
+{"fn":"matchBanned","args":["HELLOkey_name-1",["a","hello"],["日本語のテキスト","trailing.","a😀b😀c"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["a.b.chello world","ns:key.path"],["{name} has {count} itemsünïcödé"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀c",["key_name-1",""],["a..b"]],"ok":null}
+{"fn":"matchBanned","args":["a.b.c",["{name} has {count} items"],["a:b:ca😀b😀c","﻿bom","./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",[":","a😀b😀c"],["line1\nline2"]],"ok":null}
+{"fn":"matchBanned","args":["emoji 👍🏽 mix",[],["hello",".leading","{name} has {count} items"]],"ok":null}
+{"fn":"matchBanned","args":["straße",[],[".leading"]],"ok":null}
+{"fn":"matchBanned","args":["é",[],["Hello World","  padded  "]],"ok":null}
+{"fn":"matchBanned","args":["a.b.c",["﻿bom","İstanbul"],["  padded  日本語のテキスト","trailing.😀"]],"ok":null}
+{"fn":"matchBanned","args":["日本語のテキスト  padded  ",["a😀b😀c","./x/**/*.json"],["straße","straße","😀"]],"ok":null}
+{"fn":"matchBanned","args":["é",["HELLO","Hello World"],["😀{name} has {count} items","","ΣΊΣΥΦΟΣ"]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.path",["key_name-1emoji 👍🏽 mix","line1\nline2./x/**/*.json","ns:key.path"],[]],"ok":"ns:key.path"}
+{"fn":"matchBanned","args":["key_name-1",["ns:key.path","日本語のテキスト","{name} has {count} items😀"],[]],"ok":null}
+{"fn":"matchBanned","args":["ab",[],["emoji 👍🏽 mix","a.b.cabc"]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.pathhello world",["tab\tseparated"],["key_name-1a.b.c","hello world"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀ctab\tseparated",["hello"],["hello",":ΣΊΣΥΦΟΣ","hello"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["﻿bomsrc/a/b.ts","ab"],["a"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",["a.b.c"],["tab\tseparated","Hello Worldline1\nline2"]],"ok":null}
+{"fn":"matchBanned","args":["hello",["é"],["a..b","a.b.c","tab\tseparated"]],"ok":null}
+{"fn":"matchBanned","args":[":",[],["{name} has {count} items","ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",["ns:key.path"],["hello world","hello",":"]],"ok":null}
+{"fn":"matchBanned","args":["a.b.c",["abc"],[]],"ok":null}
+{"fn":"matchBanned","args":["straßetab\tseparated",["﻿bom",".leading"],["ns:key.path","straße"]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.path",["ΣΊΣΥΦΟΣ","ünïcödé","a.b.c"],["a:b:c"]],"ok":null}
+{"fn":"matchBanned","args":["./x/**/*.json",["straße","straße","ab"],[":"]],"ok":null}
+{"fn":"matchBanned","args":["",["HELLO","  padded  "],["key_name-1hello","a.b.c",":Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.tsabc",["﻿bom","hello world","日本語のテキスト"],["key_name-1","emoji 👍🏽 mix﻿bom","abc"]],"ok":null}
+{"fn":"matchBanned","args":["a.b.c",[],["ΣΊΣΥΦΟΣ","hello"]],"ok":null}
+{"fn":"matchBanned","args":["😀",["😀ab","ns:key.path","日本語のテキスト"],["😀"]],"ok":"😀"}
+{"fn":"matchBanned","args":[".leading",[],[]],"ok":null}
+{"fn":"matchBanned","args":["straße",["日本語のテキスト","hello"],[]],"ok":null}
+{"fn":"matchBanned","args":[".leadingkey_name-1",["key_name-1a..b","a"],["hello","ΣΊΣΥΦΟΣ"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",["key_name-1"],["hello",":"]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",["é","ns:key.path"],[]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["abc","emoji 👍🏽 mix","  padded  "],[]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["{name} has {count} items","ab./x/**/*.json","  padded  "],["﻿bom"]],"ok":null}
+{"fn":"matchBanned","args":["key_name-1",["﻿bom","tab\tseparatedabc"],["a.b.c","straße"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["a😀b😀c","abc"],[]],"ok":null}
+{"fn":"matchBanned","args":["a..b",["Hello World"],["é","line1\nline2"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",["ΣΊΣΥΦΟΣ"],["hello worldHello World","ünïcödé"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["Hello World","trailing."],["src/a/b.ts","abc"]],"ok":null}
+{"fn":"matchBanned","args":["{name} has {count} items",["key_name-1"],["İstanbul","  padded  trailing."]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödé",[":","日本語のテキスト"],["é","Hello World","hello"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀ca😀b😀c",["a:b:c","a",":"],["abc","ünïcödétab\tseparated"]],"ok":null}
+{"fn":"matchBanned","args":["a..b😀",["a..bkey_name-1"],["straße","😀Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",["İstanbul","emoji 👍🏽 mix","a"],["a..b{name} has {count} items","é"]],"ok":"İstanbul"}
+{"fn":"matchBanned","args":["  padded  ",[],[":","Hello World",".leading"]],"ok":null}
+{"fn":"matchBanned","args":["key_name-1",["﻿bomemoji 👍🏽 mix"],["emoji 👍🏽 mix","﻿bom"]],"ok":null}
+{"fn":"matchBanned","args":["日本語のテキスト",["straße",":","straße"],[":","./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["abc./x/**/*.json",["key_name-1"],[]],"ok":null}
+{"fn":"matchBanned","args":["trailing.",["Hello World","emoji 👍🏽 mix","a😀b😀c"],["😀",".leadinga..b","  padded  "]],"ok":null}
+{"fn":"matchBanned","args":["straßea",["straßeHELLO"],["./x/**/*.json","{name} has {count} itemsline1\nline2",".leading"]],"ok":null}
+{"fn":"matchBanned","args":["a.b.c",["  padded  ","İstanbula:b:c","é"],["hello"]],"ok":null}
+{"fn":"matchBanned","args":["key_name-1",[],["Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",["{name} has {count} items","abc","straße"],["emoji 👍🏽 mix"]],"ok":null}
+{"fn":"matchBanned","args":[":",["ns:key.path","a.b.c","HELLO"],["😀"]],"ok":null}
+{"fn":"matchBanned","args":["trailing.src/a/b.ts",["a😀b😀c","trailing.","ns:key.path"],[]],"ok":null}
+{"fn":"matchBanned","args":["{name} has {count} items",["trailing.","İstanbul","﻿bom"],[]],"ok":null}
+{"fn":"matchBanned","args":["hello world",["line1\nline2"],[]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",["hello world","日本語のテキスト😀"],[]],"ok":null}
+{"fn":"matchBanned","args":["a..b",["日本語のテキスト","tab\tseparated","key_name-1straße"],["ünïcödétrailing."]],"ok":null}
+{"fn":"matchBanned","args":["./x/**/*.json",[],["a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["abc","trailing.a😀b😀c","ΣΊΣΥΦΟΣ"],["src/a/b.ts","./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["  padded  hello world",[],["src/a/b.ts","ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀c",["src/a/b.ts","tab\tseparated","İstanbul"],["a😀b😀c","hello"]],"ok":"a😀b😀c"}
+{"fn":"matchBanned","args":[":",["abcΣΊΣΥΦΟΣ","ns:key.pathstraße"],["ns:key.path","é","a"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["ab"],["a.b.c"]],"ok":"ab"}
+{"fn":"matchBanned","args":["😀",["HELLO","İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",["ünïcödé","line1\nline2"],["key_name-1","Hello WorldHELLO"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀c",["  padded  "],[".leading"]],"ok":null}
+{"fn":"matchBanned","args":["helloab",[":","tab\tseparated"],[".leading",".leading","a..b"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["ns:key.path"],["{name} has {count} itemsns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ",[],["line1\nline2","﻿bom","line1\nline2"]],"ok":null}
+{"fn":"matchBanned","args":["😀key_name-1",[],["src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.path",["hello","straße","a"],["hello"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",[],["key_name-1"]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ",["ns:key.path","{name} has {count} items","Hello World"],["ab","ΣΊΣΥΦΟΣ",".leading"]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ",["日本語のテキスト"],["a","  padded  emoji 👍🏽 mix"]],"ok":null}
+{"fn":"matchBanned","args":["{name} has {count} items",[],["hello","日本語のテキスト","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["Hello World",["ab","Hello World"],["line1\nline2"]],"ok":"Hello World"}
+{"fn":"matchBanned","args":["",[],["é","hellostraße","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["hello.leading",[],[]],"ok":null}
+{"fn":"matchBanned","args":["aünïcödé",[],[]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",["HELLO",""],[":","a:b:cHello World"]],"ok":null}
+{"fn":"matchBanned","args":[":",["İstanbul","./x/**/*.json"],["Hello World","éns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["éa..b",["日本語のテキスト"],[]],"ok":null}
+{"fn":"matchBanned","args":["abc",["tab\tseparated","ΣΊΣΥΦΟΣ"],[".leading"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["","key_name-1","HELLO"],["éns:key.path","a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["./x/**/*.json",[],[]],"ok":null}
+{"fn":"matchBanned","args":["a..b",["a:b:c"],["a..b","a.b.c"]],"ok":"a..b"}
+{"fn":"matchBanned","args":["日本語のテキスト",["日本語のテキスト","hello world","line1\nline2"],["a..b"]],"ok":"日本語のテキスト"}
+{"fn":"matchBanned","args":["trailing.",["tab\tseparated"],["日本語のテキスト.leading","😀a:b:c"]],"ok":null}
+{"fn":"matchBanned","args":["  padded  line1\nline2",[":"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparatedtab\tseparated",["hello world","aba:b:c",""],[]],"ok":null}
+{"fn":"matchBanned","args":[":",["a😀b😀cHello World","ns:key.path"],["😀:","ünïcödé","İstanbul"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["straße",""],["a😀b😀c","İstanbulHELLO","a"]],"ok":null}
+{"fn":"matchBanned","args":["a..ba:b:c",["hello world","./x/**/*.json","straße"],[]],"ok":null}
+{"fn":"matchBanned","args":["hello",["a..babc"],[]],"ok":null}
+{"fn":"matchBanned","args":["日本語のテキスト",["a..b","tab\tseparated﻿bom","日本語のテキスト日本語のテキスト"],["a😀b😀c","a","a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["hello world",[],["HELLO","é./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",[],["","ΣΊΣΥΦΟΣ"]],"ok":null}
+{"fn":"matchBanned","args":["emoji 👍🏽 mix",["a"],["HELLO","😀"]],"ok":null}
+{"fn":"matchBanned","args":["日本語のテキスト{name} has {count} items",["{name} has {count} itemsab","src/a/b.ts"],["{name} has {count} itemstrailing.","src/a/b.ts","abcé"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",[],["helloabc"]],"ok":null}
+{"fn":"matchBanned","args":["emoji 👍🏽 mix",[],["hello world","hello:"]],"ok":null}
+{"fn":"matchBanned","args":["😀",["a:b:c","  padded  "],["hello world","emoji 👍🏽 mix","./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["日本語のテキスト",[""],["abc"]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödé",["tab\tseparated","a..b","  padded  "],["abcab","ΣΊΣΥΦΟΣ","﻿bomhello"]],"ok":null}
+{"fn":"matchBanned","args":["straße",["{name} has {count} items"],["straße日本語のテキスト","日本語のテキスト"]],"ok":null}
+{"fn":"matchBanned","args":["a..b",[],["ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["a","abc",".leading"],["key_name-1","hello world","é"]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",["hello worlda:b:c"],["tab\tseparated","trailing."]],"ok":null}
+{"fn":"matchBanned","args":["hello world",["a😀b😀c","é","日本語のテキスト"],["a","./x/**/*.jsonİstanbul"]],"ok":null}
+{"fn":"matchBanned","args":["😀",["./x/**/*.json"],["a😀b😀c"]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.path",["straßeemoji 👍🏽 mix","emoji 👍🏽 mix","HELLO"],["日本語のテキスト","./x/**/*.json","a😀b😀c"]],"ok":null}
+{"fn":"matchBanned","args":["straße",["a:b:c","😀"],[]],"ok":null}
+{"fn":"matchBanned","args":[".leadingHELLO",["😀"],["trailing.","hello worldΣΊΣΥΦΟΣ"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["emoji 👍🏽 mix","ns:key.path","日本語のテキスト"],["abc"]],"ok":null}
+{"fn":"matchBanned","args":["😀",["key_name-1"],["ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["Hello World",["ΣΊΣΥΦΟΣ"],["ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbulhello",["a😀b😀c"],["😀"]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",[],[":","ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",["ab",".leading","straße"],["hello"]],"ok":"hello"}
+{"fn":"matchBanned","args":["ns:key.path",["tab\tseparated","helloΣΊΣΥΦΟΣ","ab"],["Hello World","key_name-1"]],"ok":null}
+{"fn":"matchBanned","args":["😀",["﻿bom"],["é","a","{name} has {count} items"]],"ok":null}
+{"fn":"matchBanned","args":["{name} has {count} items",["ns:key.path","key_name-1"],["a:b:c"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",["éa","ahello world"],[]],"ok":null}
+{"fn":"matchBanned","args":["a.b.cabc",["straße","ΣΊΣΥΦΟΣ  padded  ","trailing."],["{name} has {count} itemskey_name-1","trailing."]],"ok":null}
+{"fn":"matchBanned","args":["a.b.c",["a:b:c"],["日本語のテキストé","a.b.c","hello world"]],"ok":"a.b.c"}
+{"fn":"matchBanned","args":["HELLO",[],["hello","😀"]],"ok":"hello"}
+{"fn":"matchBanned","args":["日本語のテキスト",[],["trailing.","key_name-1"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",[""],["line1\nline2","a..b"]],"ok":null}
+{"fn":"matchBanned","args":["straße",["HELLOab"],[":hello world"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣünïcödé",["abc","abc","日本語のテキスト"],["a😀b😀c","straße"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",["ab","a.b.c","{name} has {count} items"],["ünïcödé","😀"]],"ok":null}
+{"fn":"matchBanned","args":[":",["😀","ΣΊΣΥΦΟΣ","straße"],["Hello World","src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ",["key_name-1","{name} has {count} items","trailing."],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",["hello","src/a/b.ts"],["./x/**/*.json","line1\nline2","./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["😀  padded  ",["{name} has {count} items"],[]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.path",["a😀b😀c","abc","İstanbul"],["﻿bom"]],"ok":null}
+{"fn":"matchBanned","args":["Hello World",["😀","straße","a.b.c"],["a:b:ca..b"]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",["{name} has {count} items","ab"],["a.b.c","  padded  ","ab"]],"ok":null}
+{"fn":"matchBanned","args":["./x/**/*.json",[],["{name} has {count} items"]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödé",["abc","a..b"],[".leading  padded  ","a😀b😀c"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀c",["abc","﻿bom"],["src/a/b.ts","é"]],"ok":null}
+{"fn":"matchBanned","args":["😀",[],["😀"]],"ok":"😀"}
+{"fn":"matchBanned","args":["line1\nline2line1\nline2",["emoji 👍🏽 mix",".leading:","﻿bom"],[":","﻿bom","key_name-1"]],"ok":null}
+{"fn":"matchBanned","args":["😀",["trailing.","日本語のテキスト","a..b"],["{name} has {count} items","日本語のテキストsrc/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",[],["","","ünïcödé{name} has {count} items"]],"ok":null}
+{"fn":"matchBanned","args":["a",[],[]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀c",["key_name-1","hellotrailing.","ab"],[]],"ok":null}
+{"fn":"matchBanned","args":["abΣΊΣΥΦΟΣ",[],["a"]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.path",[],["ünïcödé","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["hello",["emoji 👍🏽 mix"],["  padded  "]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ",[],["日本語のテキスト","trailing.line1\nline2","ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["😀",[],[]],"ok":null}
+{"fn":"matchBanned","args":[".leading",[],[".leading","  padded  a"]],"ok":".leading"}
+{"fn":"matchBanned","args":["a:b:c",[],["a:b:c"]],"ok":"a:b:c"}
+{"fn":"matchBanned","args":["abhello world",["  padded  "],["hello world","Hello World","﻿bom"]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",[":"],[]],"ok":null}
+{"fn":"matchBanned","args":["straße",[":src/a/b.ts",".leading.leading"],["  padded  "]],"ok":null}
+{"fn":"matchBanned","args":["a",["ns:key.path","src/a/b.ts"],["a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",["trailing.","line1\nline2"],[]],"ok":null}
+{"fn":"matchBanned","args":["trailing.",["","ns:key.path😀"],["a..b","","ab"]],"ok":null}
+{"fn":"matchBanned","args":["a..b日本語のテキスト",["😀trailing.","ab"],[]],"ok":null}
+{"fn":"matchBanned","args":["hello",[],["HELLO日本語のテキスト"]],"ok":null}
+{"fn":"matchBanned","args":["a..b",["line1\nline2a:b:c"],["é"]],"ok":null}
+{"fn":"matchBanned","args":["Hello World",["aa","Hello World","line1\nline2tab\tseparated"],["key_name-1","a😀b😀c","line1\nline2"]],"ok":"Hello World"}
+{"fn":"matchBanned","args":["./x/**/*.json",["  padded  ","","{name} has {count} items"],[]],"ok":null}
+{"fn":"matchBanned","args":["a",[],["a.b.c","emoji 👍🏽 mix"]],"ok":null}
+{"fn":"matchBanned","args":["éünïcödé",["a.b.c","ünïcödéHELLO"],["a😀b😀c","a"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀chello world",["tab\tseparated","﻿bom😀"],[]],"ok":null}
+{"fn":"matchBanned","args":["a.b.c",["ab","a:b:c","line1\nline2"],["key_name-1"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",[],[".leading"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["a..b","tab\tseparated"],["emoji 👍🏽 mix"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["src/a/b.ts  padded  ","a:b:c","a:b:c"],["emoji 👍🏽 mix"]],"ok":null}
+{"fn":"matchBanned","args":["",["a.b.c"],["./x/**/*.jsontrailing.","hello world"]],"ok":null}
+{"fn":"matchBanned","args":["straße",[],[]],"ok":null}
+{"fn":"matchBanned","args":["  padded  ",["ab"],[]],"ok":null}
+{"fn":"matchBanned","args":["😀",["emoji 👍🏽 mix","hello"],["hello"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["line1\nline2日本語のテキスト"],["","./x/**/*.json.leading"]],"ok":null}
+{"fn":"matchBanned","args":["straßetrailing.",["ab","hello"],["line1\nline2"]],"ok":null}
+{"fn":"matchBanned","args":["a",[],["a","  padded  ","a..b"]],"ok":"a"}
+{"fn":"matchBanned","args":["a.b.c",["﻿bom","﻿bom","é.leading"],[]],"ok":null}
+{"fn":"matchBanned","args":["ab",["é","ns:key.path"],[]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",["ns:key.pathHello World"],["ünïcödé"]],"ok":null}
+{"fn":"matchBanned","args":[".leadinga😀b😀c",["{name} has {count} items","{name} has {count} items"],["é","😀"]],"ok":null}
+{"fn":"matchBanned","args":["key_name-1İstanbul",["trailing."],["hello world","trailing."]],"ok":null}
+{"fn":"matchBanned","args":["{name} has {count} items",[".leading"],["tab\tseparated:"]],"ok":null}
+{"fn":"matchBanned","args":["abcünïcödé",[],["ab"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",[],[".leading","","ab"]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödéa..b",["straße","HELLO","ünïcödé"],["src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["😀./x/**/*.json",["ns:key.path","ab","emoji 👍🏽 mix"],[]],"ok":null}
+{"fn":"matchBanned","args":["é",[".leading","ab",":"],["hello world",":","a.b.c😀"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",[],[".leading","日本語のテキスト","a"]],"ok":null}
+{"fn":"matchBanned","args":["straße",[],["ünïcödé","😀","src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",[".leading"],[]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["İstanbul","{name} has {count} items","{name} has {count} items"],["src/a/b.ts","tab\tseparated"]],"ok":null}
+{"fn":"matchBanned","args":["emoji 👍🏽 mix",["é","a..bHello World"],["﻿bom","😀"]],"ok":null}
+{"fn":"matchBanned","args":[":",["abcabc"],[]],"ok":null}
+{"fn":"matchBanned","args":["étab\tseparated",["emoji 👍🏽 mix","./x/**/*.json","hello world"],[]],"ok":null}
+{"fn":"matchBanned","args":[".leadingsrc/a/b.ts",[":a.b.c","atrailing."],["src/a/b.ts",""]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",["src/a/b.ts","😀","a"],["abcHELLO"]],"ok":null}
+{"fn":"matchBanned","args":["abc",["HELLO",":","ns:key.patha:b:c"],["emoji 👍🏽 mix","line1\nline2a","a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["hellosrc/a/b.ts",[],[".leading"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom😀",["abc","日本語のテキスト"],["日本語のテキスト","./x/**/*.jsona..b","HELLO"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bomstraße",[],["src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["abc",[],["ns:key.patha😀b😀c","key_name-1",":"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",[":","key_name-1","İstanbul"],["ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",[":","a..b","hello worldtab\tseparated"],["key_name-1tab\tseparated","  padded  "]],"ok":null}
+{"fn":"matchBanned","args":["hello",["{name} has {count} items","a..b","{name} has {count} items"],[""]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣns:key.path",["a😀b😀c","a:b:c"],[]],"ok":null}
+{"fn":"matchBanned","args":["hello",["abc"],[]],"ok":null}
+{"fn":"matchBanned","args":[":",["hello","😀","trailing."],["straße","tab\tseparated","hello world"]],"ok":null}
+{"fn":"matchBanned","args":[":",[],["key_name-1","ab"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts.leading",[],["helloa..b","abc"]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödé",["","﻿bom"],["  padded  ","é","a"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",["ns:key.path"],[]],"ok":null}
+{"fn":"matchBanned","args":["a..b",["a"],["İstanbul","ünïcödé","hello"]],"ok":null}
+{"fn":"matchBanned","args":["Hello World",[],["a"]],"ok":null}
+{"fn":"matchBanned","args":["straße",["hello","ünïcödé","straße"],["hello","key_name-1"]],"ok":"straße"}
+{"fn":"matchBanned","args":["straße",[],["a😀b😀c日本語のテキスト","tab\tseparated  padded  ",".leading"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",["a:b:ca😀b😀c","﻿bom"],["ΣΊΣΥΦΟΣ","﻿bom","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["src/a/b.ts",[],["","HELLO"]],"ok":null}
+{"fn":"matchBanned","args":["a:b:c",[],["src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödé",["key_name-1","é"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",["straße{name} has {count} items",":","a.b.c"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["ΣΊΣΥΦΟΣünïcödé"],["tab\tseparatedHello World","straße",":"]],"ok":null}
+{"fn":"matchBanned","args":[":",["HELLOa"],[]],"ok":null}
+{"fn":"matchBanned","args":["",[],["{name} has {count} items","tab\tseparated"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀c",["İstanbul"],["a","{name} has {count} items","日本語のテキスト"]],"ok":null}
+{"fn":"matchBanned","args":["key_name-1",[],[]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated  padded  ",["hello world","./x/**/*.json","日本語のテキスト"],[]],"ok":null}
+{"fn":"matchBanned","args":["a..b",[],["abc"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b😀c",[".leading","ns:key.path日本語のテキスト","emoji 👍🏽 mix"],[]],"ok":null}
+{"fn":"matchBanned","args":["😀",["a","aünïcödé"],["Hello World./x/**/*.json"]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",["key_name-1"],[]],"ok":null}
+{"fn":"matchBanned","args":["straße",[],["ünïcödé"]],"ok":null}
+{"fn":"matchBanned","args":["HELLOhello",["HELLO",".leadinga..b","a:b:c"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",["😀","ab"],["emoji 👍🏽 mix","a.b.c","a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödé",[".leading"],["a"]],"ok":null}
+{"fn":"matchBanned","args":["a",["line1\nline2","ünïcödé"],["abc","é"]],"ok":null}
+{"fn":"matchBanned","args":["a..b",["emoji 👍🏽 mix"],["","é"]],"ok":null}
+{"fn":"matchBanned","args":["ünïcödé",["Hello World","src/a/b.tshello world","a..b"],["key_name-1","trailing."]],"ok":null}
+{"fn":"matchBanned","args":["trailing.",["İstanbul","a..b"],["./x/**/*.json","line1\nline2ünïcödé"]],"ok":null}
+{"fn":"matchBanned","args":["line1\nline2",[],["abc","ΣΊΣΥΦΟΣ"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",["HELLO","{name} has {count} items"],["日本語のテキスト"]],"ok":"HELLO"}
+{"fn":"matchBanned","args":["tab\tseparated",[],[]],"ok":null}
+{"fn":"matchBanned","args":["ns:key.path",["hello","hello","日本語のテキスト"],["abns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["./x/**/*.json",["emoji 👍🏽 mix","😀","a😀b😀c"],["emoji 👍🏽 mix","hello world","a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["./x/**/*.jsontab\tseparated",[],[]],"ok":null}
+{"fn":"matchBanned","args":["emoji 👍🏽 mix",[],[]],"ok":null}
+{"fn":"matchBanned","args":["tab\tseparated",["{name} has {count} items","src/a/b.ts"],[".leadingemoji 👍🏽 mix","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["hello",["a..b","😀","İstanbul"],["HELLO"]],"ok":"HELLO"}
+{"fn":"matchBanned","args":["abchello world",["  padded  ","a..b","é"],["a:b:c","İstanbultab\tseparated","src/a/b.tsab"]],"ok":null}
+{"fn":"matchBanned","args":[".leading",["","ns:key.path","é"],["src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["a.b.c","abc","HELLOhello world"],[]],"ok":null}
+{"fn":"matchBanned","args":["ab",["﻿bomemoji 👍🏽 mix"],["tab\tseparated","ns:key.path.leading","a.b.c"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",["line1\nline2"],["a..b"]],"ok":null}
+{"fn":"matchBanned","args":["",["ns:key.path日本語のテキスト"],[]],"ok":null}
+{"fn":"matchBanned","args":[":",["a..b","line1\nline2",".leading"],["abc","line1\nline2","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["HELLO",["a:b:c"],["ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["a",[],["  padded  ","src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",[],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",[],["./x/**/*.jsona:b:c",".leading","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["emoji 👍🏽 mix",["﻿bom",":abc"],["é","a😀b😀c","ns:key.path"]],"ok":null}
+{"fn":"matchBanned","args":["😀",["日本語のテキスト"],["a:b:c","😀","﻿bom"]],"ok":"😀"}
+{"fn":"matchBanned","args":["tab\tseparated",[".leading","ΣΊΣΥΦΟΣ","ΣΊΣΥΦΟΣ"],["line1\nline2","tab\tseparated﻿bom","日本語のテキスト日本語のテキスト"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["a:b:c","ab",":a😀b😀c"],["a.b.c"]],"ok":"ab"}
+{"fn":"matchBanned","args":["日本語のテキスト",["é","é"],["trailing."]],"ok":null}
+{"fn":"matchBanned","args":["abé",[],["ns:key.path","line1\nline2","src/a/b.ts"]],"ok":null}
+{"fn":"matchBanned","args":["héllo wörld",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["👍🏽 thumbs",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["日本語",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["é",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["straße",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ılık ırmak",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["👨‍👩‍👧 family",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["a b",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΊΣΥΦΟΣ",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["a😀b",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["﻿bom",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["a²b x½ y①",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["aⅠb Ⅻ",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["a𐐀b 𝐀bc",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["कि ٣٤",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["Iı İi",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["K K k",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ſ s S",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["x‍y 👨‍👩‍👧",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["a b c　d",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["١٢٣ ٤٥",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["𝟘𝟙 ²³",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["snake_case foo-bar o'neil",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ǅungla Ǆ",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["one\r\ntwo threefour",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["café café",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ΣΑΣ σας ς",["ünïcödé","ab","  padded  "],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ab",[],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["b","a","B","é","10","9","a"],["éΣΊΣΥΦΟΣ","Hello World"]],"ok":null}
+{"fn":"matchBanned","args":["ab",["ünïcödé","ab","  padded  "],[]],"ok":"ab"}
+{"fn":"matchBanned","args":["ab",["ünïcödé","ab","  padded  "],["b","a","B","é","10","9","a"]],"ok":"ab"}
+{"fn":"pageTitle","args":["Mèo nhảy múa - YouTube - Google Chrome"],"ok":"Mèo nhảy múa - YouTube"}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Mèo nhảy múa - YouTube - Google Chrome",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["(3) Facebook - Personal - Microsoft Edge"],"ok":"(3) Facebook - Personal"}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["Facebook"],[]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["(3) Facebook - Personal - Microsoft Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["youtube.com - Microsoft Edge"],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",[],["youtube.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com - Microsoft Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Steam engine - Wikipedia - Mozilla Firefox"],"ok":"Steam engine - Wikipedia"}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam engine - Wikipedia - Mozilla Firefox",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Steam - Google Chrome"],"ok":"Steam"}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Steam"}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["Steam"],[]],"ok":"Steam"}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Steam - Google Chrome",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["https://www.tiktok.com/@abc - Brave"],"ok":"https://www.tiktok.com/@abc"}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"tiktok.com"}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",[],["tiktok.com"]],"ok":"tiktok.com"}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["https://www.tiktok.com/@abc - Brave",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["m.facebook.com/"],"ok":"m.facebook.com/"}
+{"fn":"matchBanned","args":["m.facebook.com/",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"facebook.com"}
+{"fn":"matchBanned","args":["m.facebook.com/",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",[],["facebook.com"]],"ok":"facebook.com"}
+{"fn":"matchBanned","args":["m.facebook.com/",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",[],["m.facebook.com"]],"ok":"m.facebook.com"}
+{"fn":"matchBanned","args":["m.facebook.com/",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["m.facebook.com/",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge"],"ok":"Facebook - Personal"}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["Facebook"],[]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook and 3 more pages - Personal - Microsoft​ Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Tinh tế | tinhte.vn - Google Chrome"],"ok":"Tinh tế | tinhte.vn"}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tinh tế | tinhte.vn - Google Chrome",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["İstanbul - YouTube"],"ok":"İstanbul - YouTube"}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["İstanbul"],[]],"ok":"İstanbul"}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["İstanbul - YouTube",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["YOUTUBE"],"ok":"YOUTUBE"}
+{"fn":"matchBanned","args":["YOUTUBE",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["YOUTUBE",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["YOUTUBE",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["YOUTUBE",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["youtube"],"ok":"youtube"}
+{"fn":"matchBanned","args":["youtube",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["youtube",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["youtube",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["youtube",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["ſteam - Chrome"],"ok":"ſteam - Chrome"}
+{"fn":"matchBanned","args":["ſteam - Chrome",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["ſteam - Chrome",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["KaRaOkE - YouTube – Opera"],"ok":"KaRaOkE - YouTube"}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["KaRaOkE - YouTube – Opera",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["(12) Zalo - Microsoft Edge"],"ok":"(12) Zalo"}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Zalo"}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["Zalo"],[]],"ok":"Zalo"}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["(12) Zalo - Microsoft Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Video hay · YouTube"],"ok":"Video hay · YouTube"}
+{"fn":"matchBanned","args":["Video hay · YouTube",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["Video hay · YouTube",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["Video hay · YouTube",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Video hay · YouTube",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Home / Facebook - Vivaldi"],"ok":"Home / Facebook"}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["Facebook"],[]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Home / Facebook - Vivaldi",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Facebook - Chromium  "],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["Facebook"],[]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chromium  ",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["x - Mozilla Firefox"],"ok":"x"}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["x - Mozilla Firefox",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["a\nYouTube"],"ok":"a\nYouTube"}
+{"fn":"matchBanned","args":["a\nYouTube",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["a\nYouTube",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["YouTube "],"ok":"YouTube"}
+{"fn":"matchBanned","args":["YouTube ",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["YouTube ",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["YouTube ",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube ",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Reddit: the front page"],"ok":"Reddit: the front page"}
+{"fn":"matchBanned","args":["Reddit: the front page",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Reddit: the front page",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["(1) (2) YouTube"],"ok":"(1) (2) YouTube"}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["(1) (2) YouTube",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Tin tức: VnExpress - Google Chrome"],"ok":"Tin tức: VnExpress"}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Tin tức: VnExpress - Google Chrome",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Học tập - YouTube - Personal - Microsoft Edge"],"ok":"Học tập - YouTube - Personal"}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Học tập - YouTube - Personal - Microsoft Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["YouTube - a long suffix over thirty characters here ok"],"ok":"YouTube - a long suffix over thirty characters here ok"}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - a long suffix over thirty characters here ok",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["YouTube - ab"],"ok":"YouTube - ab"}
+{"fn":"matchBanned","args":["YouTube - ab",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["YouTube - ab",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["YouTube - ab",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube - ab",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["YouTube – x — y"],"ok":"YouTube – x — y"}
+{"fn":"matchBanned","args":["YouTube – x — y",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["YouTube – x — y",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Facebook - Chrome"],"ok":"Facebook - Chrome"}
+{"fn":"matchBanned","args":["Facebook - Chrome",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Facebook - Chrome",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["Facebook"],[]],"ok":"Facebook"}
+{"fn":"matchBanned","args":["Facebook - Chrome",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Facebook - Chrome",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["ＹouTube"],"ok":"ＹouTube"}
+{"fn":"matchBanned","args":["ＹouTube",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["ＹouTube",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["youtube.com/watch?v=1"],"ok":"youtube.com/watch?v=1"}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",[],["youtube.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["youtube.com/watch?v=1",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["WWW.YOUTUBE.COM/"],"ok":"WWW.YOUTUBE.COM/"}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",[],["youtube.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["WWW.YOUTUBE.COM/",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["http://m.youtube.com"],"ok":"http://m.youtube.com"}
+{"fn":"matchBanned","args":["http://m.youtube.com",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["http://m.youtube.com",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",[],["youtube.com"]],"ok":"youtube.com"}
+{"fn":"matchBanned","args":["http://m.youtube.com",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["http://m.youtube.com",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["ftp://youtube.com"],"ok":"ftp://youtube.com"}
+{"fn":"matchBanned","args":["ftp://youtube.com",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["ftp://youtube.com",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Microsoft Edge"],"ok":"Microsoft Edge"}
+{"fn":"matchBanned","args":["Microsoft Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Microsoft Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["- Microsoft Edge"],"ok":"- Microsoft Edge"}
+{"fn":"matchBanned","args":["- Microsoft Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["- Microsoft Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":[" - Microsoft Edge"],"ok":""}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":[" - Microsoft Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["a - Microsoft   Edge"],"ok":"a - Microsoft   Edge"}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft   Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["a - MicrosoftEdge"],"ok":"a"}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - MicrosoftEdge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["a - Microsoft123Edge"],"ok":"a - Microsoft123Edge"}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["a - Microsoft123Edge",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Page and 1 more page - Google Chrome"],"ok":"Page"}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 1 more page - Google Chrome",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Page AND 12 MORE PAGES"],"ok":"Page"}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page AND 12 MORE PAGES",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Page and 12 more pagesx"],"ok":"Pagex"}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Page and 12 more pagesx",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["tab - Google Chrome　"],"ok":"tab"}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["tab - Google Chrome　",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["﻿YouTube"],"ok":"YouTube"}
+{"fn":"matchBanned","args":["﻿YouTube",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["﻿YouTube",["YouTube"],[]],"ok":"YouTube"}
+{"fn":"matchBanned","args":["﻿YouTube",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["﻿YouTube",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Σίσυφος - ΣΙΣΥΦΟΣ"],"ok":"Σίσυφος - ΣΙΣΥΦΟΣ"}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":"Σίσυφος"}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["Σίσυφος"],[]],"ok":"Σίσυφος"}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Σίσυφος - ΣΙΣΥΦΟΣ",[],["İ.com"]],"ok":null}
+{"fn":"pageTitle","args":["Straße - STRASSE"],"ok":"Straße - STRASSE"}
+{"fn":"matchBanned","args":["Straße - STRASSE",["YouTube","Facebook","TikTok","Zalo","Reddit","Steam","ß","İstanbul","Σίσυφος","tinhte","a.b","(x)","["],["youtube.com","facebook.com","tiktok.com","tinhte.vn","m.facebook.com","a+b.com","İ.com"]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["YouTube"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["Facebook"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["TikTok"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["Zalo"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["Reddit"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["Steam"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["ß"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["İstanbul"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["Σίσυφος"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["tinhte"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["a.b"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["(x)"],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",["["],[]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",[],["youtube.com"]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",[],["facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",[],["tiktok.com"]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",[],["tinhte.vn"]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",[],["m.facebook.com"]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",[],["a+b.com"]],"ok":null}
+{"fn":"matchBanned","args":["Straße - STRASSE",[],["İ.com"]],"ok":null}
+{"fn":"brandOf","args":["tinhte.vn"],"ok":"tinhte"}
+{"fn":"brandOf","args":["www.youtube.com"],"ok":"youtube"}
+{"fn":"brandOf","args":["a.b"],"ok":null}
+{"fn":"brandOf","args":[""],"ok":null}
+{"fn":"brandOf","args":["..."],"ok":null}
+{"fn":"brandOf","args":["x.y.z"],"ok":null}
+{"fn":"brandOf","args":["İstanbul.com"],"ok":"i̇stanbul"}
+{"fn":"brandOf","args":["ΣΑΣ.gr"],"ok":"σασ"}
+{"fn":"brandOf","args":["VIỆT.nam"],"ok":"việt"}
+{"fn":"brandOf","args":["1.5"],"ok":null}
+{"fn":"brandOf","args":["123456.789"],"ok":"123456"}
+{"fn":"brandOf","args":["a..bcd.e"],"ok":"bcd"}
+{"fn":"brandOf","args":["  "],"ok":null}
+{"fn":"brandOf","args":[".com"],"ok":null}
+{"fn":"brandOf","args":["ab.c.def."],"ok":null}
+{"fn":"brandOf","args":[123456.789],"ok":"123456"}
+{"fn":"pageTitle","args":[123456.789],"ok":"123456.789"}
+{"fn":"brandOf","args":[1e+21],"ok":null}
+{"fn":"pageTitle","args":[1e+21],"ok":"1e+21"}
+{"fn":"brandOf","args":[0],"ok":null}
+{"fn":"pageTitle","args":[0],"ok":""}
+{"fn":"brandOf","args":[0.5],"ok":null}
+{"fn":"pageTitle","args":[0.5],"ok":"0.5"}
+{"fn":"brandOf","args":[["a.bcd.e",null]],"ok":"bcd"}
+{"fn":"pageTitle","args":[["a.bcd.e",null]],"ok":"a.bcd.e,"}
+{"fn":"brandOf","args":[[["a.bcd.e"]]],"ok":"bcd"}
+{"fn":"pageTitle","args":[[["a.bcd.e"]]],"ok":"a.bcd.e"}
+{"fn":"brandOf","args":[true],"ok":null}
+{"fn":"pageTitle","args":[true],"ok":"true"}
+{"fn":"brandOf","args":[false],"ok":null}
+{"fn":"pageTitle","args":[false],"ok":""}
+{"fn":"brandOf","args":[{"$utf16":[55296,120,46,98,99,100,101,46,99,111,109]}],"ok":"bcde"}
+{"fn":"pageTitle","args":[{"$utf16":[55296,120,46,98,99,100,101,46,99,111,109]}],"ok":{"$utf16":[55296,120,46,98,99,100,101,46,99,111,109]}}
+{"fn":"brandOf","args":[0],"ok":null}
+{"fn":"pageTitle","args":[0],"ok":""}

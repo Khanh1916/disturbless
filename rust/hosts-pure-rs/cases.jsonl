@@ -1,0 +1,249 @@
+{"fn":"cleanDomain","args":[{}],"ok":null}
+{"fn":"cleanDomain","args":[{"a":{"b":"c"}}],"ok":null}
+{"fn":"cleanDomain","args":[[]],"ok":null}
+{"fn":"cleanDomain","args":[["a",1]],"ok":null}
+{"fn":"cleanDomain","args":[null],"ok":null}
+{"fn":"cleanDomain","args":[true],"ok":null}
+{"fn":"cleanDomain","args":["x"],"ok":null}
+{"fn":"cleanDomain","args":[0],"ok":null}
+{"fn":"cleanDomain","args":[{"a":"b"}],"ok":null}
+{"fn":"cleanDomain","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"ok":null}
+{"fn":"cleanDomain","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"ok":null}
+{"fn":"cleanDomain","args":[[3,1,2]],"ok":null}
+{"fn":"expandDomains","args":[{"a":"b"}],"error":"(list || []) is not iterable"}
+{"fn":"expandDomains","args":[0],"ok":[]}
+{"fn":"expandDomains","args":[{}],"error":"(list || []) is not iterable"}
+{"fn":"expandDomains","args":[null],"ok":[]}
+{"fn":"expandDomains","args":[{"a":{"b":"c"}}],"error":"(list || []) is not iterable"}
+{"fn":"expandDomains","args":[["a",1]],"ok":[]}
+{"fn":"expandDomains","args":[[]],"ok":[]}
+{"fn":"expandDomains","args":["x"],"ok":[]}
+{"fn":"expandDomains","args":[true],"error":"(list || []) is not iterable"}
+{"fn":"expandDomains","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"error":"(list || []) is not iterable"}
+{"fn":"expandDomains","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"error":"(list || []) is not iterable"}
+{"fn":"expandDomains","args":[[3,1,2]],"ok":[]}
+{"fn":"stripBlock","args":["x"],"ok":"x\r\n"}
+{"fn":"stripBlock","args":[0],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[{}],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[null],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"stripBlock","args":[true],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[[]],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[["a",1]],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"error":"text.replace is not a function"}
+{"fn":"stripBlock","args":[[3,1,2]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",0],"ok":"x\r\n"}
+{"fn":"withBlock","args":[{},{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",null],"error":"Cannot read properties of null (reading 'length')"}
+{"fn":"withBlock","args":[true,null],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[true,0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,null],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[["a",1],0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":"b"},{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[["a",1],{}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],[]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",true],"ok":"x\r\n"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},null],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[true,true],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":"b"},null],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[true,{}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,true],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{},true],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":"b"},{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[["a",1],true],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,"x"],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[true,["a",1]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[true,{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[["a",1],["a",1]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":"b"},["a",1]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[true,{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},{}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":"b"},{}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,"x"],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":"b"},true],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[["a",1],{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,null],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{},["a",1]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x","x"],"ok":"x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x\r\n:: x\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},["a",1]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,0],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},true],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[["a",1],"x"],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[["a",1],null],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{},{}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"a":"b"},"x"],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{},null],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",{"a":"b"}],"ok":"x\r\n"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},"x"],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{},{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{},0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,[]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,{}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,true],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[[],"x"],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[true,"x"],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",[]],"ok":"x\r\n"}
+{"fn":"withBlock","args":[{"a":"b"},0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],["a",1]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],true],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],{}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,{"a":{"b":"c"}}],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},[]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,{}],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[{"a":"b"},[]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",{}],"ok":"x\r\n"}
+{"fn":"withBlock","args":["x",["a",1]],"ok":"x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a\r\n:: a\r\n0.0.0.0 1\r\n:: 1\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":[["a",1],{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[0,["a",1]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",{"a":{"b":"c"}}],"ok":"x\r\n"}
+{"fn":"withBlock","args":[null,[]],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[{},[]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,["a",1]],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},{"a":{"b":"c"}}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[],null],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[["a",1],[]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{},"x"],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[null,{"a":"b"}],"error":"Cannot read properties of null (reading 'replace')"}
+{"fn":"withBlock","args":[{"a":{"b":"c"}},{"a":"b"}],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[true,[]],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x","X"],"ok":"x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 X\r\n:: X\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6},0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7},0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":[[3,1,2],0],"error":"text.replace is not a function"}
+{"fn":"withBlock","args":["x",{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"ok":"x\r\n"}
+{"fn":"withBlock","args":["x",{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"ok":"x\r\n"}
+{"fn":"withBlock","args":["x",[3,1,2]],"ok":"x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 3\r\n:: 3\r\n0.0.0.0 1\r\n:: 1\r\n0.0.0.0 2\r\n:: 2\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"hasBlock","args":[0],"error":"text.includes is not a function"}
+{"fn":"hasBlock","args":[[]],"ok":false}
+{"fn":"hasBlock","args":[{"a":"b"}],"error":"text.includes is not a function"}
+{"fn":"hasBlock","args":[{}],"error":"text.includes is not a function"}
+{"fn":"hasBlock","args":[null],"error":"Cannot read properties of null (reading 'includes')"}
+{"fn":"hasBlock","args":[["a",1]],"ok":false}
+{"fn":"hasBlock","args":["x"],"ok":false}
+{"fn":"hasBlock","args":[true],"error":"text.includes is not a function"}
+{"fn":"hasBlock","args":[{"a":{"b":"c"}}],"error":"text.includes is not a function"}
+{"fn":"hasBlock","args":[{"2":4,"10":3,"zebra":1,"apple":2,"é":5,"Apple":6}],"error":"text.includes is not a function"}
+{"fn":"hasBlock","args":[{"n":9007199254740992,"f":1e+21,"t":0.1,"neg":-7}],"error":"text.includes is not a function"}
+{"fn":"hasBlock","args":[[3,1,2]],"ok":false}
+{"fn":"cleanDomain","args":["https://www.YouTube.com/watch?v=1"],"ok":"youtube.com"}
+{"fn":"cleanDomain","args":["facebook.com"],"ok":"facebook.com"}
+{"fn":"cleanDomain","args":["m.facebook.com"],"ok":"m.facebook.com"}
+{"fn":"cleanDomain","args":["HTTP://tinhte.vn:8080/x"],"ok":"tinhte.vn"}
+{"fn":"cleanDomain","args":["www.a.b"],"ok":null}
+{"fn":"cleanDomain","args":["tiktok.com/@x#y"],"ok":"tiktok.com"}
+{"fn":"cleanDomain","args":["localhost"],"ok":null}
+{"fn":"cleanDomain","args":["a..b.com"],"ok":null}
+{"fn":"cleanDomain","args":["-a.com"],"ok":null}
+{"fn":"cleanDomain","args":["a-.com"],"ok":null}
+{"fn":"cleanDomain","args":["a.com."],"ok":null}
+{"fn":"cleanDomain","args":["x.co.uk"],"ok":"x.co.uk"}
+{"fn":"cleanDomain","args":["ab"],"ok":null}
+{"fn":"cleanDomain","args":["xn--bcher-kva.example"],"ok":"xn--bcher-kva.example"}
+{"fn":"cleanDomain","args":["  reddit.com  "],"ok":"reddit.com"}
+{"fn":"cleanDomain","args":[""],"ok":null}
+{"fn":"cleanDomain","args":["bücher.de"],"ok":null}
+{"fn":"cleanDomain","args":["ftp://FILES.example.org?q=1"],"ok":"files.example.org"}
+{"fn":"cleanDomain","args":["www.www.example.com"],"ok":"www.example.com"}
+{"fn":"cleanDomain","args":["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com"],"ok":null}
+{"fn":"cleanDomain","args":["a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.com"],"ok":null}
+{"fn":"cleanDomain","args":["1.2.3.4"],"ok":null}
+{"fn":"cleanDomain","args":["a.b-c.d-e.org"],"ok":"a.b-c.d-e.org"}
+{"fn":"cleanDomain","args":["A.B"],"ok":null}
+{"fn":"cleanDomain","args":["ex_ample.com"],"ok":null}
+{"fn":"cleanDomain","args":["exa mple.com"],"ok":null}
+{"fn":"cleanDomain","args":["git+ssh://x.io"],"ok":null}
+{"fn":"cleanDomain","args":["https://"],"ok":null}
+{"fn":"cleanDomain","args":["http://www."],"ok":null}
+{"fn":"cleanDomain","args":["ĐÂY.vn"],"ok":null}
+{"fn":"cleanDomain","args":["a.com\n"],"ok":"a.com"}
+{"fn":"cleanDomain","args":["\ta.com"],"ok":"a.com"}
+{"fn":"cleanDomain","args":["a.c"],"ok":null}
+{"fn":"cleanDomain","args":[null],"ok":null}
+{"fn":"cleanDomain","args":[0],"ok":null}
+{"fn":"cleanDomain","args":[123],"ok":null}
+{"fn":"cleanDomain","args":[["a.com"]],"ok":"a.com"}
+{"fn":"expandDomains","args":[["https://www.YouTube.com/watch?v=1","facebook.com","m.facebook.com","HTTP://tinhte.vn:8080/x","www.a.b","tiktok.com/@x#y","localhost","a..b.com","-a.com","a-.com","a.com.","x.co.uk","ab","xn--bcher-kva.example","  reddit.com  ","","bücher.de","ftp://FILES.example.org?q=1","www.www.example.com","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com","a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.com","1.2.3.4","a.b-c.d-e.org","A.B","ex_ample.com","exa mple.com","git+ssh://x.io","https://","http://www.","ĐÂY.vn","a.com\n","\ta.com","a.c"]],"ok":["youtube.com","www.youtube.com","m.youtube.com","facebook.com","www.facebook.com","m.facebook.com","tinhte.vn","www.tinhte.vn","m.tinhte.vn","tiktok.com","www.tiktok.com","m.tiktok.com","x.co.uk","xn--bcher-kva.example","www.xn--bcher-kva.example","m.xn--bcher-kva.example","reddit.com","www.reddit.com","m.reddit.com","files.example.org","www.example.com","a.b-c.d-e.org","a.com","www.a.com","m.a.com"]}
+{"fn":"expandDomains","args":[[]],"ok":[]}
+{"fn":"expandDomains","args":[null],"ok":[]}
+{"fn":"expandDomains","args":[["youtube.com","www.youtube.com","a.b.c.com","youtube.com","m.youtube.com"]],"ok":["youtube.com","www.youtube.com","m.youtube.com","a.b.c.com"]}
+{"fn":"stripBlock","args":[""],"ok":"\r\n"}
+{"fn":"hasBlock","args":[""],"ok":false}
+{"fn":"withBlock","args":["",[]],"ok":"\r\n"}
+{"fn":"withBlock","args":["",["a.com"]],"ok":"\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["",["a.com","www.a.com","m.a.com"]],"ok":"\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["",["x$y.com","a.b(c).com"]],"ok":"\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n"],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"hasBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n"],"ok":false}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n",[]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n",["a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n",["a.com","www.a.com","m.a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n",["x$y.com","a.b(c).com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n\r\n\r\n\r\n"],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"hasBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n\r\n\r\n\r\n"],"ok":false}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n\r\n\r\n\r\n",[]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n\r\n\r\n\r\n",["a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n\r\n\r\n\r\n",["a.com","www.a.com","m.a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n\r\n\r\n\r\n",["x$y.com","a.b(c).com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["\n\n\nfoo\n\n\n\nbar\n\n"],"ok":"\r\n\r\nfoo\r\n\r\nbar\r\n"}
+{"fn":"hasBlock","args":["\n\n\nfoo\n\n\n\nbar\n\n"],"ok":false}
+{"fn":"withBlock","args":["\n\n\nfoo\n\n\n\nbar\n\n",[]],"ok":"\r\n\r\nfoo\r\n\r\nbar\r\n"}
+{"fn":"withBlock","args":["\n\n\nfoo\n\n\n\nbar\n\n",["a.com"]],"ok":"\r\n\r\nfoo\r\n\r\nbar\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["\n\n\nfoo\n\n\n\nbar\n\n",["a.com","www.a.com","m.a.com"]],"ok":"\r\n\r\nfoo\r\n\r\nbar\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["\n\n\nfoo\n\n\n\nbar\n\n",["x$y.com","a.b(c).com"]],"ok":"\r\n\r\nfoo\r\n\r\nbar\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"hasBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"],"ok":true}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n",[]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n",["a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n",["a.com","www.a.com","m.a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n",["x$y.com","a.b(c).com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["top\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\nbottom\n"],"ok":"top\r\nbottom\r\n"}
+{"fn":"hasBlock","args":["top\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\nbottom\n"],"ok":true}
+{"fn":"withBlock","args":["top\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\nbottom\n",[]],"ok":"top\r\nbottom\r\n"}
+{"fn":"withBlock","args":["top\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\nbottom\n",["a.com"]],"ok":"top\r\nbottom\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["top\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\nbottom\n",["a.com","www.a.com","m.a.com"]],"ok":"top\r\nbottom\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["top\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\nbottom\n",["x$y.com","a.b(c).com"]],"ok":"top\r\nbottom\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n"],"ok":"\r\n"}
+{"fn":"hasBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n"],"ok":true}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n",[]],"ok":"\r\n"}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n",["a.com"]],"ok":"\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n",["a.com","www.a.com","m.a.com"]],"ok":"\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n",["x$y.com","a.b(c).com"]],"ok":"\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n\r\n\r\ny"],"ok":"x\r\n\r\ny\r\n"}
+{"fn":"hasBlock","args":["x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n\r\n\r\ny"],"ok":true}
+{"fn":"withBlock","args":["x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n\r\n\r\ny",[]],"ok":"x\r\n\r\ny\r\n"}
+{"fn":"withBlock","args":["x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n\r\n\r\ny",["a.com"]],"ok":"x\r\n\r\ny\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n\r\n\r\ny",["a.com","www.a.com","m.a.com"]],"ok":"x\r\n\r\ny\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["x\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 b.com\r\n:: b.com\r\n# <<< DISTURBLESS END\r\n\r\n\r\ny",["x$y.com","a.b(c).com"]],"ok":"x\r\n\r\ny\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n"],"ok":"# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n"}
+{"fn":"hasBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n"],"ok":true}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n",[]],"ok":"# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n"}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n",["a.com"]],"ok":"# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n",["a.com","www.a.com","m.a.com"]],"ok":"# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n",["x$y.com","a.b(c).com"]],"ok":"# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\nunterminated\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["no newline end"],"ok":"no newline end\r\n"}
+{"fn":"hasBlock","args":["no newline end"],"ok":false}
+{"fn":"withBlock","args":["no newline end",[]],"ok":"no newline end\r\n"}
+{"fn":"withBlock","args":["no newline end",["a.com"]],"ok":"no newline end\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["no newline end",["a.com","www.a.com","m.a.com"]],"ok":"no newline end\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["no newline end",["x$y.com","a.b(c).com"]],"ok":"no newline end\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["  \r\n  trailing ws  \r\n   "],"ok":"  \r\n  trailing ws\r\n"}
+{"fn":"hasBlock","args":["  \r\n  trailing ws  \r\n   "],"ok":false}
+{"fn":"withBlock","args":["  \r\n  trailing ws  \r\n   ",[]],"ok":"  \r\n  trailing ws\r\n"}
+{"fn":"withBlock","args":["  \r\n  trailing ws  \r\n   ",["a.com"]],"ok":"  \r\n  trailing ws\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["  \r\n  trailing ws  \r\n   ",["a.com","www.a.com","m.a.com"]],"ok":"  \r\n  trailing ws\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["  \r\n  trailing ws  \r\n   ",["x$y.com","a.b(c).com"]],"ok":"  \r\n  trailing ws\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"stripBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n\r\n"],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"hasBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n\r\n"],"ok":true}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n\r\n",[]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n\r\n",["a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n\r\n",["a.com","www.a.com","m.a.com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n0.0.0.0 www.a.com\r\n:: www.a.com\r\n0.0.0.0 m.a.com\r\n:: m.a.com\r\n# <<< DISTURBLESS END\r\n"}
+{"fn":"withBlock","args":["127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 a.com\r\n:: a.com\r\n# <<< DISTURBLESS END\r\n\r\n",["x$y.com","a.b(c).com"]],"ok":"127.0.0.1 localhost\r\n::1 localhost\r\n\r\n# >>> DISTURBLESS BEGIN (không sửa đoạn này, tự gỡ khi phiên kết thúc)\r\n0.0.0.0 x$y.com\r\n:: x$y.com\r\n0.0.0.0 a.b(c).com\r\n:: a.b(c).com\r\n# <<< DISTURBLESS END\r\n"}

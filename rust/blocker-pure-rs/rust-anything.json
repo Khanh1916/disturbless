@@ -1,0 +1,78 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "F:\\repo_github\\disturbless",
+  "unit": "core-esm/blocker_pure.js",
+  "language": "ts",
+  "kind": "wasm",
+  "crate_name": "blocker-pure-rs",
+  "exports": [
+    {
+      "name": "normName",
+      "file": "core-esm/blocker_pure.js",
+      "line": 18,
+      "params": [
+        {
+          "name": "n",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "isSystemPath",
+      "file": "core-esm/blocker_pure.js",
+      "line": 21,
+      "params": [
+        {
+          "name": "p",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "systemRoot",
+          "ts_type": "unknown",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    },
+    {
+      "name": "evaluate",
+      "file": "core-esm/blocker_pure.js",
+      "line": 34,
+      "params": [
+        {
+          "name": "windows",
+          "ts_type": "Array<{pid,name,title,path}>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "cfg",
+          "ts_type": "{appMode:'allow'|'block'|'off', allowed:string[], blocked:string[], selfPids:number[], systemRoot?:string}",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "returns": "unknown",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
